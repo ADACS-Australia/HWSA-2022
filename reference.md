@@ -2,6 +2,21 @@
 layout: reference
 ---
 
+## Glossary
+
+{:auto_ids}
+ADACS
+:   Astronomy Data And Computing Services.
+    For more info see [adacs.org.au](https://adacs.org.au/)
+
+ASA
+:   The Astronomical Society of Australia
+
+HWSA
+:   The Harley Wood School for Astronomy
+
+
+
 ## Git Cheatsheets for Quick Reference
 
 *   A printable Git cheatsheet is [available here](https://about.gitlab.com/images/press/git-cheat-sheet.pdf). More material is available from the [GitLab basics guides website](https://docs.gitlab.com/ee/gitlab-basics/).
@@ -9,7 +24,7 @@ layout: reference
     about the relationships between workspace, staging area, local repository, upstream repository, and the commands associated with each (with explanations).
 * [Learning git branching](https://learngitbranching.js.org/ ) is an interactive tutorial, covering remotes, branching, merging, rebase and more
 
-## Glossary
+### Git Glossary
 
 {:auto_ids}
 changeset
@@ -30,46 +45,17 @@ conflict
     Helping users [resolve](#resolve) conflicts
     is one of version control's major tasks.
 
-HTTP
-:   The Hypertext Transfer [Protocol](#protocol) used for sharing web pages and other data
-    on the World Wide Web.
-
 merge
 :   (a repository): To reconcile two sets of changes to a
     [repository](#repository).
-
-protocol
-:   A set of rules that define how one computer communicates with another.
-    Common protocols on the Internet include [HTTP](#http) and [SSH](#ssh).
-
-remote
-:   (of a repository) A version control [repository](#repository) connected to another,
-    in such way that both can be kept in sync exchanging [commits](#commit).
 
 repository
 :   A storage area where a [version control](#version-control) system
     stores the full history of [commits](#commit) of a project and information
     about who changed what, when.
 
-resolve
-:   To eliminate the [conflicts](#conflict) between two or more incompatible changes to a file or set of files
-    being managed by a [version control](#version-control) system.
-
 revision
 :   A synonym for [commit](#commit).
-
-SHA-1
-:   [SHA-1 hashes](https://en.wikipedia.org/wiki/SHA-1) is what Git uses to compute identifiers, including for commits.
-    To compute these, Git uses not only the actual change of a commit, but also its metadata (such as date, author,
-    message), including the identifiers of all commits of preceding changes. This makes Git commit IDs virtually unique.
-    I.e., the likelihood that two commits made independently, even of the same change, receive the same ID is exceedingly
-    small.
-
-SSH
-:   The Secure Shell [protocol](#protocol) used for secure communication between computers.
-
-timestamp
-:   A record of when a particular event occurred.
 
 version control
 :   A tool for managing changes to a set of files.
