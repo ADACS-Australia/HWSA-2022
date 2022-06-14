@@ -76,14 +76,16 @@ The program `rsync` is smart enough to do this mirroring by only copying the cha
 > - What are some of the draw backs in using this method of backup?
 > - How could you ensure that you use the same command each time you do your backup?
 > - How could you automate this task so that you no longer have to think about it or spend time on it?
-> > ## Solution notes
-> > - If you don't have your calendar open you might forget to run the program.
-> > - You might not run the program on every Monday because you don't work every Monday.
-> > - Keep the above text in a file called `backup_instructions.txt` so that you remember how to do it correctly.
-> > - Convert `backup_instructions.txt` into `do_backup.sh`, add a `#!` (shebang) line, and make the file executable, so you can type `./do_backup.sh`
-> > - You could automate by adding the above line to your crontab so that it will always run on a Monday morning without your input
-> {: .solution}
 {: .challenge}
+
+> ## Solution notes
+> - If you don't have your calendar open you might forget to run the program.
+> - You might not run the program on every Monday because you don't work every Monday.
+> - Keep the above text in a file called `backup_instructions.txt` so that you remember how to do it correctly.
+> - Convert `backup_instructions.txt` into `do_backup.sh`, add a `#!` (shebang) line, and make the file executable, so you can type `./do_backup.sh`
+> - You could automate by adding the above line to your crontab so that it will always run on a Monday morning without your input
+{: .solution}
+
 
 Any work that you can do from the command line can be automated in a similar way.
 A good approach to take when considering automating a task is:
