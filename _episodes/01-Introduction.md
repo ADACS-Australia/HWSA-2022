@@ -3,8 +3,12 @@ title: "Introduction"
 teaching: 5
 exercises: 0
 questions:
-- "What will be learning today?"
+- "What will be learning?"
 - "How will be learning?"
+keypoints:
+- "This is not a lecture"
+- "The more you engage the more you will benefit"
+- "Everyone is here to learn and that means making mistakes"
 ---
 ## Acknowledgement of country
 We wish to acknowledge the custodians of the land we reside on, for the developers of these lessons, these are the Wadjuk (Perth region) people of the Nyoongar nation.
