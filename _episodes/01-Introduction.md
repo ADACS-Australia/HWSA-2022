@@ -1,10 +1,14 @@
 ---
 title: "Introduction"
-teaching: 5
-exercises: 0
+teaching: 10
+exercises: 5
 questions:
-- "What will be learning today?"
+- "What will be learning?"
 - "How will be learning?"
+keypoints:
+- "This is not a lecture"
+- "The more you engage the more you will benefit"
+- "Everyone is here to learn and that means making mistakes"
 ---
 ## Acknowledgement of country
 We wish to acknowledge the custodians of the land we reside on, for the developers of these lessons, these are the Wadjuk (Perth region) people of the Nyoongar nation.
@@ -50,6 +54,9 @@ The more you engage with your fellow learners and the more questions that you as
 We will be using sticky notes for in-person participants to indicate their readiness to move on: please stick them on your laptop screen to indicate if you need help or are done and ready to move ahead.
 For those joining online we'll be using the cross or check icons (zoom) to indicate the same.
 
+We will use a shared document ([etherpad](https://pad.systemli.org/p/hwsa-2022-workshop-tassie)) to manage and record many of our interactions.
+
+
 ## Conduct
 
 This workshop will be an inclusive and equitable space, which respects:
@@ -68,3 +75,13 @@ We ask that you follow these guidelines:
 - Do not engage in tech-shaming.
 
 See the [ASA2022 code of conduct](https://www.asa2022.org/code-of-conduct) and the [Software Carpentries code of conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html) for more information.
+
+
+
+> ## Introduce yourselves
+> <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/D6B5/production/_123956945_225107a3-318d-4c2e-b040-2dcd03c4698a.jpg" width="400" alt="Ice Breaker">
+> 
+> Introduce yourself to your peers by telling us your name, a game you enjoy playing, and a food that you would like to try but never have.
+> 
+> Please also introduce yourself in more detail in the shared google doc.
+{: .challenge}
