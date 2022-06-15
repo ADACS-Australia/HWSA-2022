@@ -6,6 +6,11 @@ questions:
 - "What is scientific computing?"
 - "How can I automate common tasks?"
 - "What is reproducible research?"
+keypoints:
+- "Scientific computing has different goals from computer science and software engineering"
+- "You are a scientist, your focus is on the science"
+- "Automation can occur at many levels"
+- "Reproducibility is good for everyone (especially you)"
 ---
 
 # Scientific Computing

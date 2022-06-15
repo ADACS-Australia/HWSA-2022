@@ -6,6 +6,10 @@ questions:
 - "What does best practice mean?"
 - "What are the top N things to do?"
 - "What are the top N things to avoid?"
+keypoints:
+- "Validation is testing"
+- "Documentation benefits everyone (especially you)"
+- "Version control will save you time and effort"
 ---
 # Best Practices In Scientific Computing
 Borrowed and adapted from computer science and software engineering.
