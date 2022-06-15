@@ -26,3 +26,10 @@ alias topcat='java -jar ~/Software/topcat/topcat-full.jar'
 alias py3='source ~/.py3/bin/activate'
 ~~~
 {: .language-bash}
+
+## Structured data storage
+CSV files are great but can be cumbersome to work with when they become large or when you have multiple files with related data.
+An alternative is to store your data as tables in a database, where you can make explicit links between multiple tables, and make use of the SQL language to select, filter, order, and extract the data that you need.
+Some commercial (but free) solutions include [PostgreSQL](https://www.postgresql.org/) and [MySQL](https://www.mysql.com/), but these require a fair bit of system admin to get setup and work with.
+A great lightweight middle-ground is [SQLite](https://www.sqlite.org/index.html), which provides the core functionality of a relational database but without all the security, authentication, and sys admin requirements of a commercial solution.
+See this [carpentries](https://swcarpentry.github.io/sql-novice-survey/) lesson for an introduction do databases using SQLite.
