@@ -8,7 +8,7 @@ questions:
 - "How do I store and access structured data?"
 - "How do I store and access unstructured data?"
 keypoints:
-- "Clean your data"
+- "Invest time in cleaning and transforming your data"
 - "Meta data gives context and makes your data easier to understand"
 - "How and where you store your data is important"
 ---
@@ -25,7 +25,7 @@ Here we are more concerned with a higher level of abstraction, which includes th
   - as it comes directly from a sensor or data source
   - contains signal + noise
   - format and quality is highly dependent on the data source
-- cleaned data
+- clean data
   - has bad/invalid records removed or flagged
   - has been converted to a format which is usable by your analysis or processing tools
 - transformed data
@@ -118,16 +118,6 @@ Now we'll explore the data set using pandas.
 > print(df)
 > print("Summary of data")
 > print(df.describe())
->                  id      mass (g)          year        reclat       reclong
-> count  45716.000000  4.558500e+04  45425.000000  38401.000000  38401.000000
-> mean   26889.735104  1.327808e+04   1991.828817    -39.122580     61.074319
-> std    16860.683030  5.749889e+05     25.052766     46.378511     80.647298
-> min        1.000000  0.000000e+00    860.000000    -87.366670   -165.433330
-> 25%    12688.750000  7.200000e+00   1987.000000    -76.714240      0.000000
-> 50%    24261.500000  3.260000e+01   1998.000000    -71.500000     35.666670
-> 75%    40656.750000  2.026000e+02   2003.000000      0.000000    157.166670
-> max    57458.000000  6.000000e+07   2101.000000     81.166670    354.473330
-> >>> 
 > ~~~
 > {: .language-python}
 > ~~~
