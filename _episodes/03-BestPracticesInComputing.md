@@ -27,7 +27,9 @@ In this lesson we will focus on repetition, version control, testing, documentat
 To demonstrate the utility of these topics we'll be working on a common task - analyzing meteorite falls around the world.
 
 # Reading in data
-You can download the data with the command:
+You can download the data with the command[^nbcurl]:
+
+[^nbcurl]: replace `wget` with `curl -O` if you are using gitbash
 
 ```
 wget https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Metorite_Landings.csv

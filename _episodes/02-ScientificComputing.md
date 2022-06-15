@@ -115,6 +115,7 @@ Let's explore some of these useful command line tools that you might use to prov
 ~~~
 grep
 wget
+curl
 sed
 cut
 wc
