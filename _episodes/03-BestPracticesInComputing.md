@@ -162,6 +162,18 @@ max    56644.000000  2.400000e+07  -12.263330  152.833330
 
 With only a few lines we can load the data and have a quick look. You can see that the count of mass is only 637 out of 643 so pandas has recognised that there is missing mass data and has even calculated a mean mass for us.
 
+
+NOTE:
+- common tasks will have existing solutions
+- use those solutions to avoid making mistakes and wasting time
+- see pypi etc for existing solutions
+- common libraries are astropy, scipy, numpy, pandas, matplotlib, seaborn, .... look in these first
+- scikit-learn, scikit-image...
+
+Example activitiy:
+- Look for a module that will do XXXXX
+- add 5 more
+
 ## Validating data
 
 One of the best ways to test or validate the data is to plot it in a few different ways to visually inspect it. Let's make a scatter graph of these positions using [matplotlib](https://matplotlib.org/stable/tutorials/index)
