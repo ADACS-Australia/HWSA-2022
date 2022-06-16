@@ -40,7 +40,7 @@ Here we are more concerned with a higher level of abstraction, which includes th
   - often represented as tables or figures
 
 The following describes a generic data processing workflow
-![DataProcessing]({{ page.root }}{% link fig/DataProcessing.svg %}){: width='400'}
+![DataProcessing]({{ page.root }}{% link fig/DataProcessing.svg %}){: width='800'}
 
 > ## Discussion
 > In your groups have a look at the different types of data and stages of the data processing workflow.
@@ -56,7 +56,7 @@ The following describes a generic data processing workflow
 We can classify data by the processing stage as was done above, but also in an orthogonal dimension of how the data is organized.
 The two most general considerations here are either structured or unstructured data.
 
-![StructredUnstructredData](http://intellspot.com/wp-content/uploads/2020/04/Structured-vs-unstructured-data-an-infographic-1024x724.png){: width='400'}
+![StructredUnstructredData](http://intellspot.com/wp-content/uploads/2020/04/Structured-vs-unstructured-data-an-infographic-1024x724.png){: width='800'}
 
 The way that we can store and access data depends on how it's structured.
 
@@ -81,8 +81,7 @@ For example you could have:
 > - For each of the files decide what stage of processing they are in, wether they are structured or unstructured data
 > - Make a plan for how you would store and manage this data
 > - Note in the shared document what you have decided for at least one of the files
-> 
-{: .exercise}
+{: .challenge}
 
 ## Data cleaning
 In the previous lesson we worked with a file `Australian_Meteorite_Landings.csv`.
@@ -215,6 +214,7 @@ Enough complaining, lets start fixing.
 > - Select, count, and delete all rows that are outside of this bounding box
 > - Save our new dataframe as a `.csv` file
 > - Run our previously created script on this file and view the results
+{: .challenge}
 
 ## Data storage and access
 

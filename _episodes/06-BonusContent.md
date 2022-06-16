@@ -16,7 +16,7 @@ Some common examples:
 alias ll='ls -al'
 
 # open ds9 and press about 20 buttons to get the interface set up just the way I like
-alias ds9='~/Software/ds9/ds9 -scalelims -0.2 1 -tile -cmap cubehelix0 -lock frame wcs -lock scale yes -lock colorbar yes -lock crosshair wcs
+alias ds9='~/Software/ds9/ds9 -scalelims -0.2 1 -tile -cmap cubehelix0 -lock frame wcs -lock scale yes -lock colorbar yes -lock crosshair wcs'
 
 # run stilts and topcat and not have to bother with the java invocation
 alias stilts='java -jar ~/Software/topcat/topcat-full.jar -stilts'
