@@ -187,7 +187,8 @@ For example:
 
 Here is where we need to think about the meta-data attached to this table.
 We need context (how/why the table was created), and also a description of what the data represent.
-If we go to the NASA website they have a description of the column data, but it's not so helpful:
+If we go to the [NASA website](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh) which provides this data, they have a description of the column data.
+However, it's not so helpful:
 
 ![MeteoriteColumnDescriptions]({{page.root}}{% link fig/MeteoriteColumnDescriptions.png %}){: .width=400}
 
