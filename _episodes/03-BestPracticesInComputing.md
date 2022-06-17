@@ -127,6 +127,21 @@ Since we have just started our new project and have some initial progress, this 
 > - Check that you have committed your progress by running `git log`
 {: .challenge}
 
+If at any point we are editing our work and we break something, or change our mind about what we are doing, so long as we have the files under version control we can go back to our previous save point using:
+```
+git checkout -- <filename>
+```
+{: .language-bash}
+
+If we want to reach way back in time we can do
+```
+git checkout <hash> <filename>
+```
+{: .language-bash}
+
+Where the `<hash>` is one of the long alphanumeric strings that are shown when we run `git log`.
+Having good commit messages will make it easier to tell which commit we should be going back to.
+
 Now we have some first step that we can come back to later if we mess things up.
 Let's try and do something with this data - computing the mean mass of the meteorites.
 We can do this by adding the following to our script and re-running:
