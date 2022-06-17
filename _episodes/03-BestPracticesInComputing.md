@@ -39,17 +39,23 @@ Here are some guiding principles that should be followed when planning or writin
 In this lesson we will focus on repetition, version control, testing, documentation, and repetition. 
 To demonstrate the utility of these topics we'll be working on a common task - analyzing meteorite falls around the world.
 
-# Reading in data
-You can download the data with the command[^nbcurl]:
+# Use case - visualizing a data set
+Let's go through the process of visualizing some data and see if we can incorporate the above best practices as we go.
+We will be working with a data file that contains information about metorites that have fallen in Australia, and our aim is to plot the location of the meteorites, and give an indication of their masses.
+
+To begin with we need to obtain the data.
+We have a nice data set prepared for you which you can download the data with the command[^nbcurl]:
 
 [^nbcurl]: replace `wget` with `curl -O` if you are using gitbash
 
 ```
 wget https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Metorite_Landings.csv
+# or
+curl -O https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Metorite_Landings.csv
 ```
 {: .language-bash}
 
-You can have a peak inside the csv file with the command:
+We will start with a peak inside this file with the `head` command:
 
 ```
 head Australian_Metorite_Landings.csv
@@ -72,25 +78,29 @@ head Australian_Metorite_Landings.csv
 > {: .output}
 {: .solution}
 
-From this you can see that we have given you a simple csv that for each metortie has an ID, a mass, and a recorded position in latitude and logitude.
-We shall use this csv as an example of how to investigate data, confirm that they are valid and see if we can get any results.
+From this you can see that we have given you a `.csv` file recording meteorites that have landed in Australia.
+The four columns represent an ID, a mass, and a recorded position in latitude and longitude.
 
-There are few ways that we can read in the this csv in Python. A fairly manual way is using the csv module like so
+We'll use python for our visualization, so we begin by reading the file with python.
+Reproducing the above quick summary in python we would write a script like the following:
+
 
 ```
+# the csv library has a lot of read/write functions for csv files
 import csv
 
 csv_list = []
+
 # opening the CSV file
 with open('Australian_Metorite_Landings.csv', mode ='r') as file:
   # read the CSV file
   csv_reader = csv.reader(file)
 
-  # loop over each line and record it
+  # loop over the lines in the file and add each to our list
   for line in csv_reader:
         csv_list.append(line)
 
-# print the first 10 lines
+# print the first 10 lines to ensure that we are on the right track.
 print(csv_list[:10])
 ```
 {: .language-python}
@@ -102,32 +112,58 @@ print(csv_list[:10])
 > {: .output}
 {: .solution}
 
-Then if you wanted to get the mean mass you could add the following to our script:
+At this point we should save our work in a file and make sure that we are on the right track by running the script and inspecting the output.
+Since we have just started our new project and have some initial progress, this is a great time to set up our version control.
+
+> ## Start a new project
+> - Create a new directory for your project with a name that makes sense to you
+> - Save your initial python script as `plot_meteorites.py` (what we'll eventually be doing)
+> - Run your script and ensure that it's not broken
+> - Initialize a git repository in this directory by typing `git init`
+> - Tell git that you want this new file to be tracked by using `git add <filename>`
+> - Also commit your data file using the same technique
+> - Save your initial progress by creating a new commit to your repository via `git commit -m > <message>`
+>   - The first commit message can be something simple like "initial version"
+> - Check that you have committed your progress by running `git log`
+{: .challenge}
+
+Now we have some first step that we can come back to later if we mess things up.
+Let's try and do something with this data - computing the mean mass of the meteorites.
+We can do this by adding the following to our script and re-running:
 
 ```
 import numpy as np
 
 all_mass = []
-# csv_list[1:] will skip header
+
+# csv_list[1:] will skip the first line which is our header (not data)
 for id, mass, lat, long in csv_list[1:]:
-    # make sure there is no missing data
+    # skip missing data
     if mass != "":
-        # Convert from string to float
+        # Convert string -> float and append to our list
         all_mass.append(float(mass))
-# Output mean
-print(np.mean(all_mass))
+
+# Output mean of the masses
+print("The mean mass is:", np.mean(all_mass), "g")
 ```
 {: .language-python}
 
 ```
-80919.38811616955
+...
+The mean mass is: 80919.38811616955 g
 ```
 {: .output}
 
-Which is fine but that was a bit of work for what feels like a very standard task.
+> ## Save your progress
+> - Once our script is in a working state, save it, add it to git, and then commit it
+> - Use a commit message that describes what we did in less than 50 chars
+> - Double check your git log to see that the changes have been applied
+{: .challenge}
+
+The above is fine but that was a bit of work for what feels like a very standard task.
 Let's be guided by the "don't repeat others" mentality, and see if we can find an existing solution that will do this work for us.
 The python data analysis library [pandas](https://pandas.pydata.org/docs/) has a lot of great functionality built around data structures called data frames which are a fancy kind of table.
-So if we let pandas do all the hard work for us then we can replace our above code with the following:
+So if we let pandas do all the hard work for us then we can extend our above code with the following:
 
 ```
 # Use the pandas library
@@ -148,6 +184,7 @@ print(df.describe())
 
 > ## output
 > ```
+> ...
 > csv data
 > --------------------------
 >         id   mass (g)    reclat    reclong
@@ -183,8 +220,23 @@ print(df.describe())
 With only a few lines we can load the data and have a quick look.
 You can see that the count of mass is only 637 out of 643 so pandas has recognized that there is missing mass data and has even calculated a mean mass for us.
 
+> ## Save your progress
+> - Once our script is in a working state, save it, add it to git, and then commit it
+> - Use a commit message that describes what we did in less than 50 chars
+> - Double check your git log to see that the changes have been applied
+{: .challenge}
 
-> ## Challenge
+Now that pandas is doing all the file reading and format handling for us we can do away with our previous attempt at reading a csv file.
+
+> ## Delete some code and check it in
+> - Delete all the code before the "import pandas as pd" command
+> - Run `git status` to see which files have changed
+> - Run `git diff plot_meteorites.py` to see what changes have been made to the file
+> - Run the script and confirm that it still works
+> - Add and commit our work to our git repository
+{: .challenge}
+
+> ## Pre-existing solutions
 > See if you can identify a python package (module) that will help you with each of the following tasks:
 > - Read `.fits` format images
 > - Create a 'corner plot' from multi-dimensional data
@@ -206,20 +258,43 @@ As you work in other fields you'll notice that different software packages are s
 At the end of the day the right tool is the one that gets the job done, and you should not be afraid of exploring beyond python to get your work done.
 
 ## Visualizing data
+Back to our main task of making a nice plot of our data.
+Let's make a scatter graph of the locations of the meteorites using the [matplotlib](https://matplotlib.org/stable/tutorials/index) module.
 
-One of the best ways to test or validate the data is to plot it in a few different ways to visually inspect it.
-Let's make a scatter graph of these positions using [matplotlib](https://matplotlib.org/stable/tutorials/index)
+Since this should be a simple task, we shouldn't be supprized to find that we can complete it in a few lines of code.
+Add the following to our script and run it:
 
 ```
+# import the plotting library with a short name
 import matplotlib.pyplot as plt
 
+# make a scatter plot
 plt.scatter(df['reclong'], df['reclat'], edgecolors='0')
+
+# label our plot!
+plt.xlabel("Longitude (deg)")
+plt.ylabel("Latitude (deg)")
+plt.title("Meteorite landing locations")
+
+# pop up a window with our plot
 plt.show()
 ```
 {: .language-python}
 
-That looks vaguely Australia shaped but to be sure lets plot this against a map of Australia to make sure we believe the locations.
+> ## Our first plot
+> ![MeteoriteLocations1]({{page.root}}{% link fig/MeteoriteLocations_1.png %}){: .width='800'}
+> 
+{: .solution}
+
+> ## Save your progress
+> - Commit your changes to the plotting script.
+{: .challenge}
+
+
+Our plot looks vaguely Australia shaped but to be sure lets plot this against a map of Australia to make sure we believe the locations.
 Doing this manually would be difficult so, after some Googling, we have found a python module that can do it for you called [Basemap](https://basemaptutorial.readthedocs.io/en/latest/first_map.html)
+
+Replace the previous plotting section of your script with the following:
 
 ```
 from mpl_toolkits.basemap import Basemap
@@ -251,11 +326,21 @@ m.drawmeridians(np.arange(-180,180,10),labels=[1,1,0,1])
 
 # Convert your data to the Basemap coordinates and add it to the plot
 x, y = m(df['reclong'], df['reclat'])
-plt.scatter(x, y, edgecolors='0')
+plt.scatter(x, y, 
+            edgecolors='0',
+            zorder=2) # make the points be in front of the basemap
 plt.show()
 ```
 {: .language-python}
 
+> ## Our second plot
+> ![MeteoriteLocations2]({{page.root}}{% link fig/MeteoriteLocations_2.png %}){: .width='800'}
+> 
+{: .solution}
+
+> ## Save your progress
+> - Commit your changes to the plotting script.
+{: .challenge}
 
 We could also have a look at the distribution of masses using the [seaborn](https://seaborn.pydata.org/) module like so:
 
