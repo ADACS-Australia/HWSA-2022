@@ -4,8 +4,8 @@ teaching: 30
 exercises: 30
 questions:
 - "What does best practice mean?"
-- "What are the top N things to do?"
-- "What are the top N things to avoid?"
+- "What practices should I adopt?"
+- "What should I try to avoid?"
 keypoints:
 - "Validation is testing"
 - "Documentation benefits everyone (especially you)"
@@ -14,20 +14,29 @@ keypoints:
 # Best Practices In Scientific Computing
 Borrowed and adapted from computer science and software engineering.
 
-- Good code etiquette
-  - Efficiency vs clarity
-  - Readability
-  - Naming things
-  - Rule of three
-  - KISS
-  - 90-90 rule
-  - Documentation
-  - Testing
-  - Optimization
-  - Version control
+Since the top priority of scientific computing is to have software that produces correct results, we can make our lives easier by adopting practices that make our code or scripts easier to understand (by humans) so that errors can be found and fixed easily.
+Additionally, since our research work is continuously changing it is very likely that we will revisit our scripts to re-use them (in part or in whole) or expand their use.
+Here again readability and clarity will be of benefit, but so will version control, and modularization.
 
-In this lesson we will focus on repetition, version control, testing, documentation, and repetition.
+Here are some guiding principles that should be followed when planning or writing scripts, regardless of language:
 
+| Guideline                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Clarity over efficiency      | Prioritize writing clear code over efficient code. Make use of programming idioms[^idioms]. Do standard things in standard ways. Write code for humans to understand in the first instance, and only secondarily for computers.                                                                                                                                                                                                                                            |
+| Naming is important          | Choose meaningful and useful names for variables/functions/classes/scripts. Typically: objects are nouns, functions are verbs, pluralize variables that represent lists or collections. Unhelpful names can be annoying to work with, whilst confusing names can be downright destructive.                                                                                                                                                                                 |
+| Don't repeat yourself        | When something works reuse it. Bundle repeated code into functions and call those functions. Bundle functions into modules that can be imported. Write simple (single intent) tools that can be easily incorporated into larger workflows.                                                                                                                                                                                                                                 |
+| Don't repeat others          | If something seems routine then there is almost always an existing solution that you can rely on. Look for existing libraries/modules or programs that you can make use of. Don't reinvent the wheel[^lessons]                                                                                                                                                                                                                                                             |
+| Document                     | You *will* forget what you did and why you did it. Write yourself a document that describes the problem you were trying to solve, the approach that you took, and how you solved it. If the solution is a script, then describe how to use the script including the inputs, what options are available, and what the output is. This can be a `README.md` file, docstrings (in python) or a pdf. The format is less important than the fact that the documentation exists. |
+| Test                         | Only the very lucky get things right the first time. Don't rely on luck. When you write a script, do something to convince yourself that it works. Manually inspecting results for a known example is form of testing. This of testing as validation.                                                                                                                                                                                                                      |
+| Version control              | When moving towards a solution we often make a wrong turn. Use a version control system to create a 'checkpoint' or 'save point' that you can easily come back to if things go bad. You don't need to do pull requests, branching, merging, or upload your files to GitHub for version control to be useful.                                                                                                                                                               |
+| Avoid premature optimization | Optimization *can* save time in the term run but *always* costs time in the short term. Optimize *your* time by firstly solving the problem, and only engage in optimization when you know there is a problem[^xkcd].                                                                                                                                                                                                                                                      |
+
+[^idioms]: See [programming idioms](https://en.wikipedia.org/wiki/Programming_idiom)
+[^lessons]: Re-inventing the wheel can be a great learning experience, however when you are focusing on getting work done, it's most often not a good use of your time.
+[^xkcd]: Consider this handy chart from [xkcd](https://xkcd.com/1205/)
+
+
+In this lesson we will focus on repetition, version control, testing, documentation, and repetition. 
 To demonstrate the utility of these topics we'll be working on a common task - analyzing meteorite falls around the world.
 
 # Reading in data
