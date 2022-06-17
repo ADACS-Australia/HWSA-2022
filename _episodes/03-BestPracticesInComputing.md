@@ -357,21 +357,6 @@ plt.show()
 > - Commit your changes to the plotting script.
 {: .challenge}
 
-We could also have a look at the distribution of masses using the [seaborn](https://seaborn.pydata.org/) module like so:
-
-```
-import seaborn as sns
-
-#create density plot of data
-sns.kdeplot(df['mass (g)'])
-plt.show()
-
-# O that looked a bit silly lets make it a log plot
-sns.kdeplot(np.log(df['mass (g)']))
-plt.show()
-```
-{: .language-python}
-
 ## Creating a resuable script
 
 This is looking great but before we go any further we should make this into a function as part of a script so it's easier to rerun.
