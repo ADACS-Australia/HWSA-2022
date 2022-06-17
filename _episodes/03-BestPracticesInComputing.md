@@ -29,7 +29,7 @@ Here are some guiding principles that should be followed when planning or writin
 | Document                     | You *will* forget what you did and why you did it. Write yourself a document that describes the problem you were trying to solve, the approach that you took, and how you solved it. If the solution is a script, then describe how to use the script including the inputs, what options are available, and what the output is. This can be a `README.md` file, docstrings (in python) or a pdf. The format is less important than the fact that the documentation exists. |
 | Test                         | Only the very lucky get things right the first time. Don't rely on luck. When you write a script, do something to convince yourself that it works. Manually inspecting results for a known example is form of testing. This of testing as validation.                                                                                                                                                                                                                      |
 | Version control              | When moving towards a solution we often make a wrong turn. Use a version control system to create a 'checkpoint' or 'save point' that you can easily come back to if things go bad. You don't need to do pull requests, branching, merging, or upload your files to GitHub for version control to be useful.                                                                                                                                                               |
-| Avoid premature optimization | Optimization *can* save time in the term run but *always* costs time in the short term. Optimize *your* time by firstly solving the problem, and only engage in optimization when you know there is a problem[^xkcd].                                                                                                                                                                                                                                                      |
+| Avoid premature optimization | Optimization *can* save time in the term run but *always* costs time in the short term. Optimize *your* time by firstly solving the problem, and only engage in optimization after you find out that your code is taking too long or using too many resources[^xkcd].                                                                                                                                                                                                      |
 
 [^idioms]: See [programming idioms](https://en.wikipedia.org/wiki/Programming_idiom)
 [^lessons]: Re-inventing the wheel can be a great learning experience, however when you are focusing on getting work done, it's most often not a good use of your time.
@@ -56,19 +56,21 @@ head Australian_Metorite_Landings.csv
 ```
 {: .language-bash}
 
-```
-id,mass (g),reclat,reclong
-5051,488.1,-33.15639,115.67639
-48653,324.0,-31.35,129.19
-7743,30.0,-31.66667,152.83333
-10033,127.0,-29.46667,151.61667
-10120,26000.0,-33.35,146.85833
-12264,41730.0,-35.08333,139.91667
-16643,330000.0,-26.45,120.36667
-16738,8887.5,-40.975,145.6
-16766,11300.0,-29.8,141.7
-```
-{: .output}
+> ## output
+> ```
+> id,mass (g),reclat,reclong
+> 5051,488.1,-33.15639,115.67639
+> 48653,324.0,-31.35,129.19
+> 7743,30.0,-31.66667,152.83333
+> 10033,127.0,-29.46667,151.61667
+> 10120,26000.0,-33.35,146.85833
+> 12264,41730.0,-35.08333,139.91667
+> 16643,330000.0,-26.45,120.36667
+> 16738,8887.5,-40.975,145.6
+> 16766,11300.0,-29.8,141.7
+> ```
+> {: .output}
+{: .solution}
 
 From this you can see that we have given you a simple csv that for each metortie has an ID, a mass, and a recorded position in latitude and logitude.
 We shall use this csv as an example of how to investigate data, confirm that they are valid and see if we can get any results.
@@ -93,12 +95,14 @@ print(csv_list[:10])
 ```
 {: .language-python}
 
-```
-[['id', 'mass (g)', 'reclat', 'reclong'], ['5051', '488.1', '-33.15639', '115.67639'], ['48653', '324.0', '-31.35', '129.19'], ['7743', '30.0', '-31.66667', '152.83333'], ['10033', '127.0', '-29.46667', '151.61667'], ['10120', '26000.0', '-33.35', '146.85833'], ['12264', '41730.0', '-35.08333', '139.91667'], ['16643', '330000.0', '-26.45', '120.36667'], ['16738', '8887.5', '-40.975', '145.6'], ['16766', '11300.0', '-29.8', '141.7']]
-```
-{: .output}
+> ## output
+> ```
+> [['id', 'mass (g)', 'reclat', 'reclong'], ['5051', '488.1', '-33.15639', '115.67639'], ['48653', > '324.0', '-31.35', '129.19'], ['7743', '30.0', '-31.66667', '152.83333'], ['10033', '127.0', '-29.> 46667', '151.61667'], ['10120', '26000.0', '-33.35', '146.85833'], ['12264', '41730.0', '-35.08333', > '139.91667'], ['16643', '330000.0', '-26.45', '120.36667'], ['16738', '8887.5', '-40.975', '145.6'], > ['16766', '11300.0', '-29.8', '141.7']]
+> ```
+> {: .output}
+{: .solution}
 
-Then if you wanted to get the mean mass you could do this:
+Then if you wanted to get the mean mass you could add the following to our script:
 
 ```
 import numpy as np
@@ -120,11 +124,16 @@ print(np.mean(all_mass))
 ```
 {: .output}
 
-Which is fine but that was a bit of work. Instead we recomend that you learn how to use [pandas](https://pandas.pydata.org/docs/). Pandas makes reading in and inspecting data even easier.
+Which is fine but that was a bit of work for what feels like a very standard task.
+Let's be guided by the "don't repeat others" mentality, and see if we can find an existing solution that will do this work for us.
+The python data analysis library [pandas](https://pandas.pydata.org/docs/) has a lot of great functionality built around data structures called data frames which are a fancy kind of table.
+So if we let pandas do all the hard work for us then we can replace our above code with the following:
 
 ```
+# Use the pandas library
 import pandas as pd
 
+# read a csv file into a data frame
 df = pd.read_csv('Australian_Metorite_Landings.csv')
 
 # Have a look at the data
@@ -137,55 +146,69 @@ print(df.describe())
 ```
 {: .language-python}
 
-```
-csv data
---------------------------
-        id   mass (g)    reclat    reclong
-0     5051      488.1 -33.15639  115.67639
-1    48653      324.0 -31.35000  129.19000
-2     7743       30.0 -31.66667  152.83333
-3    10033      127.0 -29.46667  151.61667
-4    10120    26000.0 -33.35000  146.85833
-..     ...        ...       ...        ...
-638  30359      262.5 -32.03333  126.17500
-639  30361   132000.0 -14.25000  132.01667
-640  30362    40000.0 -31.19167  121.53333
-641  30373   118400.0 -29.50000  118.75000
-642  30374  3800000.0 -32.10000  117.71667
+> ## output
+> ```
+> csv data
+> --------------------------
+>         id   mass (g)    reclat    reclong
+> 0     5051      488.1 -33.15639  115.67639
+> 1    48653      324.0 -31.35000  129.19000
+> 2     7743       30.0 -31.66667  152.83333
+> 3    10033      127.0 -29.46667  151.61667
+> 4    10120    26000.0 -33.35000  146.85833
+> ..     ...        ...       ...        ...
+> 638  30359      262.5 -32.03333  126.17500
+> 639  30361   132000.0 -14.25000  132.01667
+> 640  30362    40000.0 -31.19167  121.53333
+> 641  30373   118400.0 -29.50000  118.75000
+> 642  30374  3800000.0 -32.10000  117.71667
+> 
+> [643 rows x 4 columns]
+> 
+> panda describe
+> --------------------------
+>                  id      mass (g)      reclat     reclong
+> count    643.000000  6.370000e+02  643.000000  643.000000
+> mean   19219.513219  8.091939e+04  -30.275400  130.594478
+> std    14869.941958  1.029442e+06    2.940091    7.655877
+> min      471.000000  0.000000e+00  -41.500000  114.216670
+> 25%    10136.500000  3.280000e+01  -30.841665  126.587915
+> 50%    15481.000000  1.291000e+02  -30.383330  128.916670
+> 75%    23537.500000  2.426000e+03  -30.086415  132.008335
+> max    56644.000000  2.400000e+07  -12.263330  152.833330
+> ```
+> {: .output}
+{: .solution}
 
-[643 rows x 4 columns]
-
-panda describe
---------------------------
-                 id      mass (g)      reclat     reclong
-count    643.000000  6.370000e+02  643.000000  643.000000
-mean   19219.513219  8.091939e+04  -30.275400  130.594478
-std    14869.941958  1.029442e+06    2.940091    7.655877
-min      471.000000  0.000000e+00  -41.500000  114.216670
-25%    10136.500000  3.280000e+01  -30.841665  126.587915
-50%    15481.000000  1.291000e+02  -30.383330  128.916670
-75%    23537.500000  2.426000e+03  -30.086415  132.008335
-max    56644.000000  2.400000e+07  -12.263330  152.833330
-```
-{: .output}
-
-With only a few lines we can load the data and have a quick look. You can see that the count of mass is only 637 out of 643 so pandas has recognised that there is missing mass data and has even calculated a mean mass for us.
+With only a few lines we can load the data and have a quick look.
+You can see that the count of mass is only 637 out of 643 so pandas has recognized that there is missing mass data and has even calculated a mean mass for us.
 
 
-NOTE:
-- common tasks will have existing solutions
-- use those solutions to avoid making mistakes and wasting time
-- see pypi etc for existing solutions
-- common libraries are astropy, scipy, numpy, pandas, matplotlib, seaborn, .... look in these first
-- scikit-learn, scikit-image...
+> ## Challenge
+> See if you can identify a python package (module) that will help you with each of the following tasks:
+> - Read `.fits` format images
+> - Create a 'corner plot' from multi-dimensional data
+> - Plot images using sky coordinates using the correct projection
+> - Read and write `.hdf5` format data files
+> - Solve equations analytically/exactly
+> - Train and evaluate machine learning models
+> Head over to the python package index at [pypi.org](https://pypi.org/), and search for the packages you found.
+>
+> In our shared document make a note of a package that you wish existed, and then look at the wish list of others and see if you can suggest a (partial) solution.
+{: .challenge}
 
-Example activitiy:
-- Look for a module that will do XXXXX
-- add 5 more
+In the above challenge you may have seen a few modules that occur frequently, either because they are large and multi-purpse modules, or because they are fundamental and used as a building block for many others.
+For example, `scipy` and `numpy` are fundamental to most of the scientific computing libraries that are built, and packages like `astropy` are becoming very widely use in astronomy.
 
-## Validating data
+If you have noticed a bias towards python in our teaching examples, it is because of this rich ecosystem of freely available and easy to use modules.
+The large adoption within the astronomy community, also means that it is easy to get relevant and specific help from your peers.
+As you work in other fields you'll notice that different software packages are standard and usually for the same reason - easy of access, and access to support.
+At the end of the day the right tool is the one that gets the job done, and you should not be afraid of exploring beyond python to get your work done.
 
-One of the best ways to test or validate the data is to plot it in a few different ways to visually inspect it. Let's make a scatter graph of these positions using [matplotlib](https://matplotlib.org/stable/tutorials/index)
+## Visualizing data
+
+One of the best ways to test or validate the data is to plot it in a few different ways to visually inspect it.
+Let's make a scatter graph of these positions using [matplotlib](https://matplotlib.org/stable/tutorials/index)
 
 ```
 import matplotlib.pyplot as plt
