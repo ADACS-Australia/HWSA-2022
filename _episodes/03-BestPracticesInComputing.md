@@ -479,6 +479,13 @@ For this you'll have to come up with some quantitative measures of what pass/fai
 If/when you get to this point you should start thinking about using a testing framework such as [`pytest`](https://docs.pytest.org/en/latest) to help with the automation and organization of the tests.
 (You still have to write them yourself though!)
 
+> ## Create test file
+> - Create either `test.txt` or `test.sh` using the example above
+> - Do/run the test
+> - Commit the test file to your git repo
+> 
+{: .challenge}
+
 ## Documentation
 Documenting your code is important as it makes it clear how you code generates your results and shows others (and yourself) how to use your code. There are several levels of documentation and what level is appropriate depends on the purpose, complexity and who will use your code.
 
@@ -535,3 +542,10 @@ Create analysis plots using:
 
 You can use VSCode extensions to view the rendered version or push it to GitHub to view it on the webpage.
 This will remind you how to use your code and where you got your data.
+
+> ## Create a README file for your repo
+> - Create a `README.md` file in your repo
+> - Add your name, an description of the intent of the repo, and what the various files do
+> - Commit this file to your git repo
+> 
+{: .challenge}
