@@ -446,7 +446,7 @@ It will always be interpreted as a string, and in this case we'll use it as a fi
 > ## add a command line interface
 > - modify your code so that it reads the name of the data file from the command line
 > - test your code by running it on both the Australia and New Zealand data
-> - commit your changes to your repository
+> - commit your changes to your repository (including the new data file)
 > 
 {: .challenge}
 
