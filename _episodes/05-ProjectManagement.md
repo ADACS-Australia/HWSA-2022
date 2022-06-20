@@ -34,7 +34,7 @@ The two styles represent different ends of a flexibility spectrum.
 
 In the **waterfall** mindset there is a very linear approach to the design and execution and delivery of the project with the main focus being on compliance and following a set process.
 This works well in situations that are very risk averse, or have a large amount of external oversight.
-You'll see waterfall style project management in large projects like instrument development, construction, and commissioning. 
+You'll see waterfall style project management in large projects like instrument development, construction, and commissioning.
 
 Due to the rigid design of waterfall managed projects, the work requirements are often visualised in a Gantt chart such as the one below:
 
@@ -69,7 +69,7 @@ As the name suggests, tasks can move within a swimlanes, but are not intended to
 > - Could you get away with fewer categories?
 > - Would it be useful to divide your tasks into different swimlanes, and if so how?
 > - What tasks could you put in each category right now?
-> 
+>
 > Using a simple markdown format create a table in our shared document that shows the categories (and swimlanes if used) that you would use for your project.
 > If you have time include some example tasks.
 > (See the example table).
@@ -118,14 +118,32 @@ Now that we have that nomenclature out of the way, lets get started with our Tre
 > - Add yourself as a member of the card
 > - Add a short description to the card
 > - Move the card to the "done" column
-> 
+>
 > Pat yourself on the back for a job well done.
 {: .challenge}
 
 ## Time management
-Part of project management but different.
+Part of managing a project is realising that time is a very limited resource so it is often beneficial to manage it to the best of your abilities. You can split time management into two main catagories, prosepctive (planning) and retrospective (tracking).
 
-Prospective
+A common way of estimating time projects will take is to work in hours/days/weeks/months of effort.
+However you are often not working on a single task at a time so it can be easier to break your total time available (your Full-Time Equivalent or FTE), into fractions, and then assign these fractions to different tasks.
+By estimating and tracking your FTE over the course of a project you can ensure that you are not spread too thin and you can finish tasks on time.
+Effective time management will prevent you from taking on more work than you can realistically complete.
+
+For example, someone asks you to help with a project.
+You look at your project planning app and see that you have two projects you aim to spend 0.4 FTE on and a third you aim to spend 0.2 FTE on.
+Since this fills up the entire 1.0 FTE, you let them know that you can not assist on their project.
+You know that your third project will be complete in a month, so you offer to provide help at the level of 0.2 FTE starting in a month.
+
+Deciding where you spend your FTE is only half the battle.
+You must also track your time to ensure that you are staying on budget, and adjusting if required.
+Tracking your time can be done through several apps ([see the following section](#how-to-track-your-time)) and should give you at least a rough estimate of the time you spend on each project.
+This basic information will allow you to see how much time tasks and projects take and improve your future estimates.
+For example, you estimated that it would take you a month to write the first chapter of your thesis, but it took six weeks.
+You now know to budget more time for the next chapter.
+Another example is that you budget 0.5 FTE for teaching, but you realize you are using 0.6 FTE, so you will have to cut back on other projects.
+
+<!-- Prospective
 - scoping of work
 - planning effort
 - day-to-day, hour-by-hour planning (calendar)
@@ -140,13 +158,29 @@ Retrospective
 Exercise
 - list the work that you do, how much time you want to spend on each item, and how much you *think* you do
 - Of the three methods described for time tracking which would be more useful to you
-- What are the pro/con of some of the methods
+- What are the pro/con of some of the methods -->
+
+## How to track your time
+There is a large variety of time tracking techniques and software available to help you track your time.
+Probably the most useful for academic work is an online or mobile app.
+Some time tracking apps are feature rich with all kinds of integrations and billing options, however they can come with a large time overhead which can be counter productive.
+If you are spending more than 10 minutes per day tracking your time, it is unlikely to be worth the effort, so we will focus on simple time tracking methods.
+
+### Excel method
+[Here](https://docs.google.com/spreadsheets/d/1SGGcZE7vZULR72iWkuvSsmgca2sCJEu9CWxWDEVF2L0/edit?usp=sharing) is a link to a simple Google Sheets template (shown below) of an easy way to track how much time you spend per week on several projects.
+At the end of each week, you update the sheet to track the fraction of your time you spent on each project.
+Additional projects can be added easily as new columns.
+This is effective for when you only care about your fractional FTE at a fairly low resolution.
+![excel_method](../fig/ExcelMethod.png)
+
+### Chronos app
+[Chronos](https://app.chronostimetracking.com/) is a simple app that will allow you to keep track of your project time.
+Simply make a new project with a descriptive name and set the billing type to non-billable.
+You can start a timer for the project you are currently working on or manually add how many hours you have spent.
+This method is good for when you have many projects that you are swapping between throughout the day, or when you want to be able to track your 'effective' work hours within a week.
+![chronos_example](../fig/chronos_example.png)
 
 
-## Online tools for project/time management
-Trello
-
-Literally any calendar app
 
 ## Managing "up"
 - Expectation management
