@@ -259,6 +259,7 @@ Now that pandas is doing all the file reading and format handling for us we can 
 > - Read and write `.hdf5` format data files
 > - Solve equations analytically/exactly
 > - Train and evaluate machine learning models
+> 
 > Head over to the python package index at [pypi.org](https://pypi.org/), and search for the packages you found.
 >
 > In our shared document make a note of a package that you wish existed, and then look at the wish list of others and see if you can suggest a (partial) solution.
@@ -317,30 +318,24 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 fig=plt.figure()
-# setup map projection.
-min_long = 110
-max_long = 155
-min_lat  = -45
-max_lat  = -10
-m = Basemap(
-    # Lower left corner longitude
-    llcrnrlon=min_long,
-    # Upper right corner longitude
-    urcrnrlon=max_long,
-    # Lower left corner latitude
-    llcrnrlat=min_lat,
-    # Upper right corner latitude
-    urcrnrlat=max_lat,
-    projection='mill',
+
+# setup map projection
+bm = Basemap(
+    llcrnrlon=df['reclong'].min()-5,  # Lower left corner longitude
+    urcrnrlon=df['reclong'].max()+5,  # Upper right corner longitude                   
+    llcrnrlat=df['reclat'].min()-5,   # Lower left corner latitude
+    urcrnrlat=df['reclat'].max()+5,   # Upper right corner latitude
 )
-# Draw in Austrlia and map lines
-m.drawcoastlines()
-m.fillcontinents()
-m.drawparallels(np.arange(-90,90,10),labels=[1,1,0,1])
-m.drawmeridians(np.arange(-180,180,10),labels=[1,1,0,1])
+
+# Draw in coasline and map lines
+bm.drawcoastlines()
+bm.fillcontinents()
+bm.drawparallels(np.arange(-90,90,10),  # The location of the parallels
+                 labels=[1,1,0,1])      # Which axes to show labels on
+bm.drawmeridians(np.arange(-180,180,10),labels=[1,1,0,1])
 
 # Convert your data to the Basemap coordinates and add it to the plot
-x, y = m(df['reclong'], df['reclat'])
+x, y = bm(df['reclong'], df['reclat'])
 plt.scatter(x, y, 
             edgecolors='0',
             zorder=2) # make the points be in front of the basemap
@@ -357,102 +352,133 @@ plt.show()
 > - Commit your changes to the plotting script.
 {: .challenge}
 
-## Creating a resuable script
+## Creating a reusable script
 
-This is looking great but before we go any further we should make this into a function as part of a script so it's easier to rerun.
-Functions makes it easier to reuse parts of your code which prevents you from repeating yourself and making mistakes.
-Lets combine all of our analysis into a single script (and lets make the scatter plot different sizes based on the mass) like so
+This is looking great but before we go any further we should make the plotting component into a function as part of a script so it's easier to rerun for different locations on the Earth.
+Moving commonly used code into a function, rather than just copy/pasting it, is ane example of *don't repeat yourself*.
+
+Let's take all of the plotting part of our script and put it into a function called `plot_meteor_locations`, and allow the user to supply a data frame with the data, and a bounding box of lat/long for the plotting area.
+
+Since this function is something that we'll be using often, it's a good idea to write some documentation for the function.
+In python we can use a docstring to show what the function is supposed to do and what the expected inputs ared.
+Alternatively we could write a short noted in a `REDEME.md` file that describes how to use the program.
 
 
 ```
-from mpl_toolkits.basemap import Basemap
-import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.basemap import Basemap
 import pandas as pd
-import seaborn as sns
+import numpy as np
 
-def plot_metorite_analysis(
-    df,
-    # optional arguments
-    min_long=110,
-    max_long=155,
-    min_lat=-45,
-    max_lat=-10,
-):
-    log_mass = np.log(df['mass (g)'])
 
-    fig = plt.figure()
-    # setup map projection.
-    m = Basemap(
-        # Lower left corner longitude
-        llcrnrlon=min_long,
-        # Upper right corner longitude
-        urcrnrlon=max_long,
-        # Lower left corner latitude
-        llcrnrlat=min_lat,
-        # Upper right corner latitude
-        urcrnrlat=max_lat,
-        projection='mill',
+def plot_meteor_locations(df):
+    fig=plt.figure()
+
+    # setup map projection
+    bm = Basemap(
+        llcrnrlon=df['reclong'].min()-5,  # Lower left corner longitude
+        urcrnrlon=df['reclong'].max()+5,  # Upper right corner longitude                   
+        llcrnrlat=df['reclat'].min()-5,   # Lower left corner latitude
+        urcrnrlat=df['reclat'].max()+5,   # Upper right corner latitude
     )
-    # Draw in Austrlia and map lines
-    m.drawcoastlines()
-    m.fillcontinents()
-    m.drawparallels(np.arange(-90,90,10),labels=[1,1,0,1])
-    m.drawmeridians(np.arange(-180,180,10),labels=[1,1,0,1])
-
+    
+    # Draw in coasline and map lines
+    bm.drawcoastlines()
+    bm.fillcontinents()
+    bm.drawparallels(np.arange(-90,90,10),  # The location of the parallels
+                     labels=[1,1,0,1])      # Which axes to show labels on
+    bm.drawmeridians(np.arange(-180,180,10),labels=[1,1,0,1])
+    
     # Convert your data to the Basemap coordinates and add it to the plot
-    x, y = m(df['reclong'], df['reclat'])
-    # Make the scatter dots size propotional to the mass
-    plt.scatter(x, y, edgecolors='0', s=log_mass)
+    x, y = bm(df['reclong'], df['reclat'])
+    plt.scatter(x, y, 
+                edgecolors='0',
+                zorder=2) # make the points be in front of the basemap
     plt.show()
-
-    sns.kdeplot(np.log(df['mass (g)']))
-    plt.show()
-
+    return
 
 if __name__ == '__main__':
+    # read a csv file into a data frame
     df = pd.read_csv('Australian_Metorite_Landings.csv')
-    plot_metorite_analysis(df)
+    plot_meteor_locations(df)
 ```
 {: .language-python}
 
 Now you have a script that is easy to rerun if you want to recreate the plot and if anyone asks you how you generated the results you can show them your script so you can go through the steps one by one to confirm their validity.
 
-It's a good thing you made your script repeatable because someone points out that your mass distribution looks wrong. After some investigation you notice that [np.log](https://numpy.org/doc/stable/reference/generated/numpy.log.html) is a natural log not base 10! Luckily you can fix that quickly. You function can also easily be used for future data sets.
-Ooops np.log is a natural log!
+> ## Let's focus on New Zealand
+> - Verify that your code works and then commit the changes to your repo
+> - Download the New Zealand data file from [link](todo)
+> - Edit your script to use the new data file, save, and rerun
+>
+{: .challenge}
 
-lets vesion control this
+## Making your script re-usable
+Right now if someone wants to use your script they would have to import that function into their own script like this:
+~~~
+from plot_meteorites import plot_meteor_locations
+# ... load a data frame called df
+plot_meteor_locations(df)
+~~~
+{: .language-python}
 
-make it git
+However, it is often nice to have a basic command line interface.
+In python any arguments that we pass to the program are stored in a list, and we can access this list from the `sys` module via `sys.argv`.
+If we want to read the name of the data file from the command line we can modify our `if __main__` clause like this:
 
-document it so it's clear
+~~~
+import sys
 
-readme describing the input data
+# ... the rest of our code
 
-make sure you have a final script so you can recreate these plots easily
+if __name__ == '__main__':
+    # get the filename from the command line as the last argument
+    csv_file = sys.argv[-1]
+    # read a csv file into a data frame                     
+    df = pd.read_csv(csv_file)
+    plot_meteor_locations(df)
+~~~
+{: .language-python}
 
-Make a script for both processing and plotting
+Here the `sys.argv[-1]` refers to the *last* argument that was given.
+It will always be interpreted as a string, and in this case we'll use it as a filename.
 
-This prevents you being unsure how you got your results
-
-
-## Version control
-Don't loose track of your working versions.
-Online backup is a bonus but not essential.
-Collaborative work is nice but not essential.
-merge/rebase/branch are nice but not essential.
+> ## add a command line interface
+> - modify your code so that it reads the name of the data file from the command line
+> - test your code by running it on both the Australia and New Zealand data
+> - commit your changes to your repository
+> 
+{: .challenge}
 
 ## Testing
+Testing is something that many people think is too much work to bother with.
+However, we are always testing our code even if we don't think of it that way.
+Any time you run your code and compare the behavior/output with expectations is a test.
 Testing is not hard, and we already do it so let's just embrace that.
 
-Anything that you do to validate your work is testing.
-- making plots
-- writing to STDOUT
-- checking known cases
+In the previous challenge we ran our code on two different data sets, and then inspected the output to confirm that the code was working as intended.
+To do that we ran the following bash commands:
 
-Automation is nice, but not essential for testing.
+~~~
+python3 plot_meteorites.py New_Zealand_Meteorite_Landings.csv
+python3 plot_meteorites.py Australian_Meteorite_Landings.csv
+~~~
+{: .language-bash}
 
-Think about how you will validate your work as you develop your data collection and methodology.
+If we were to make some changes to our code, it is a good idea to re-run these tests to make sure that we haven't broken any of the existing functionality.
+If we are adding some new functionality, or fixing some bug, then it would be good to have a new test to run to verify that the new parts of the code are working as intended.
+To remind ourselves of how we do the testing lets make a file to record the process.
+In fact, we can just make a file called `test.txt` which includes the above two lines of code and maybe a short description of what is expected.
+When we want to run the test we just open the file and follow the instructions, copy/paste the lines of code as required.
+
+If we think back to our lesson on scientific computing and automation we can take this a step further.
+We could write `test.sh` with the same lines of code as `test.txt` (and convert the instructions into comments), and then use `source test.sh` to have all the code execute automatically.
+
+As your testing becomes more involved you'll eventually want to look into some more automated ways of not just running the tests, but ensuring that the tests all pass.
+For this you'll have to come up with some quantitative measures of what pass/fail look like, and then write a bit of code that will check against these conditions.
+If/when you get to this point you should start thinking about using a testing framework such as [`pytest`](https://docs.pytest.org/en/latest) to help with the automation and organization of the tests.
+(You still have to write them yourself though!)
+
 
 ## Documentation
 Many levels:
@@ -465,6 +491,3 @@ Consider the audience:
 - users
 - developers
 - you in 6 months time
-
-## Avoiding repetition
-Repeated code means repeated opportunity for mistakes and inconsistencies.
