@@ -36,7 +36,7 @@ Here are some guiding principles that should be followed when planning or writin
 [^xkcd]: Consider this handy chart from [xkcd](https://xkcd.com/1205/)
 
 
-In this lesson we will focus on repetition, version control, testing, documentation, and repetition. 
+In this lesson we will focus on repetition, version control, testing, documentation, and repetition.
 To demonstrate the utility of these topics we'll be working on a common task - analyzing meteorite falls around the world.
 
 # Use case - visualizing a data set
@@ -214,9 +214,9 @@ print(df.describe())
 > 640  30362    40000.0 -31.19167  121.53333
 > 641  30373   118400.0 -29.50000  118.75000
 > 642  30374  3800000.0 -32.10000  117.71667
-> 
+>
 > [643 rows x 4 columns]
-> 
+>
 > panda describe
 > --------------------------
 >                  id      mass (g)      reclat     reclong
@@ -298,7 +298,7 @@ plt.show()
 
 > ## Our first plot
 > ![MeteoriteLocations1]({{page.root}}{% link fig/MeteoriteLocations_1.png %}){: .width='800'}
-> 
+>
 {: .solution}
 
 > ## Save your progress
@@ -341,7 +341,7 @@ m.drawmeridians(np.arange(-180,180,10),labels=[1,1,0,1])
 
 # Convert your data to the Basemap coordinates and add it to the plot
 x, y = m(df['reclong'], df['reclat'])
-plt.scatter(x, y, 
+plt.scatter(x, y,
             edgecolors='0',
             zorder=2) # make the points be in front of the basemap
 plt.show()
@@ -350,7 +350,7 @@ plt.show()
 
 > ## Our second plot
 > ![MeteoriteLocations2]({{page.root}}{% link fig/MeteoriteLocations_2.png %}){: .width='800'}
-> 
+>
 {: .solution}
 
 > ## Save your progress
@@ -419,22 +419,65 @@ if __name__ == '__main__':
 Now you have a script that is easy to rerun if you want to recreate the plot and if anyone asks you how you generated the results you can show them your script so you can go through the steps one by one to confirm their validity.
 
 It's a good thing you made your script repeatable because someone points out that your mass distribution looks wrong. After some investigation you notice that [np.log](https://numpy.org/doc/stable/reference/generated/numpy.log.html) is a natural log not base 10! Luckily you can fix that quickly. You function can also easily be used for future data sets.
-Ooops np.log is a natural log!
 
-lets vesion control this
 
-make it git
+## Documentation
+Documenting your code is important as it makes it clear how you code generates your results and shows others (and yourself) how to use your code. There are several levels of documentation and what level is approprite depends on the purpose, complexity and who will use your code.
 
-document it so it's clear
+Documentation levels include:
+1. Code comments
+2. README.md
+3. `--help` or docstrings (Python)
+4. [readthedocs.io](https://readthedocs.org/) which can host your documentation and using [sphinx](https://www.sphinx-doc.org/en/master/) you can automate it's generation
+5. A user guide (pdf or markdown) to explain how to use the code with explanations and common examples
 
-readme describing the input data
+Considering your audience is a good indicator of what documentation level you should aim for
+- You in 6 months time (level 2-3)
+- Other developers of the code (level 3-4)
+- Other users (level 4-5)
 
-make sure you have a final script so you can recreate these plots easily
+[Markdown](https://www.markdownguide.org/cheat-sheet/) (.md) is a common syntax to generate documentation, for example a README.md will automatically be rendered on GitHub.
 
-Make a script for both processing and plotting
+Lets create a README.md for your code.
 
-This prevents you being unsure how you got your results
+```
+# Meteortie Analysis Software
+This git repository contains python scripts to analyse meteorite data for my research, which is bound to win me the noble prize.
 
+## Installation
+This software isn't installable (yet), but it's always good to describe how to install your software. Some common ways to install python scripts include
+
+`python setup install`
+
+or
+
+`pip install .`
+
+## Data
+It is always best to note where your data came from and describe how to use it.
+
+### Australian_Meteorite_Landings.csv
+Data downloaded from https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Metorite_Landings.csv. A truncated version of the data from https://data.nasa.gov/Space-Science/Meteorite-Landings/ak9y-cwf9.
+
+id: NASA meteorite
+
+mass (g): Mass of the meteorite in grams
+
+reclat: Recorded latitude in degrees
+
+reclong: Recorded longitude in degrees
+
+## Running Software
+Create analysis plots using:
+
+`python plot_meteorites.py`
+```
+{: .language-MD}
+
+You can use VSCode extensions to view the rendered version or push it to GitHub to view it on the webpage.
+This will remind you how to use your code and where you got your data.
+
+// TODO argpars
 
 ## Version control
 Don't loose track of your working versions.
@@ -454,17 +497,6 @@ Automation is nice, but not essential for testing.
 
 Think about how you will validate your work as you develop your data collection and methodology.
 
-## Documentation
-Many levels:
-- README.md
-- `--help` or docstrings (Python)
-- userguid.pdf
-- myproject.readthedocs.io
-
-Consider the audience:
-- users
-- developers
-- you in 6 months time
 
 ## Avoiding repetition
 Repeated code means repeated opportunity for mistakes and inconsistencies.
