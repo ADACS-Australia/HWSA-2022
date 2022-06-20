@@ -12,7 +12,7 @@ Software required:
   - Windows, use either [WSL](https://docs.microsoft.com/en-us/windows/wsl/) if you have it installed, or gitbash (above)
 - A python environment
   - python3 (ideally 3.8+)
-  - matplotlib, seabourne, pandas
+  - matplotlib, basemap, numpy, pandas
 - Online tools
   - An account on [trello](https://trello.com/en) (free)
 
