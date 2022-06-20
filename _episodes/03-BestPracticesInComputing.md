@@ -408,7 +408,7 @@ Now you have a script that is easy to rerun if you want to recreate the plot and
 
 > ## Let's focus on New Zealand
 > - Verify that your code works and then commit the changes to your repo
-> - Download the New Zealand data file from [link](todo)
+> - Download the New Zealand [data file](https://github.com/ADACS-Australia/HWSA-2022/blob/gh-pages/data/New_Zealand_Meteorite_Landings.csv)
 > - Edit your script to use the new data file, save, and rerun
 >
 {: .challenge}

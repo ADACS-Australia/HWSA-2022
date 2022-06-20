@@ -143,23 +143,6 @@ For example, you estimated that it would take you a month to write the first cha
 You now know to budget more time for the next chapter.
 Another example is that you budget 0.5 FTE for teaching, but you realize you are using 0.6 FTE, so you will have to cut back on other projects.
 
-<!-- Prospective
-- scoping of work
-- planning effort
-- day-to-day, hour-by-hour planning (calendar)
-- avoiding over-commits
-
-Retrospective
-- tracking effort
-- learning to better scope / plan work
-- adjusting future plans
-
-
-Exercise
-- list the work that you do, how much time you want to spend on each item, and how much you *think* you do
-- Of the three methods described for time tracking which would be more useful to you
-- What are the pro/con of some of the methods -->
-
 ## How to track your time
 There is a large variety of time tracking techniques and software available to help you track your time.
 Probably the most useful for academic work is an online or mobile app.
@@ -180,13 +163,45 @@ You can start a timer for the project you are currently working on or manually a
 This method is good for when you have many projects that you are swapping between throughout the day, or when you want to be able to track your 'effective' work hours within a week.
 ![chronos_example](../fig/chronos_example.png)
 
+> ## How do you spend your time?
+> Think about the work that you do as part of your research.
+> - Itemize the projects/work that you do (up to 10 max)
+> - For each item how much time you want to spend on it
+> - For each item estimate how much you *think* you spend on it
+> - Use our shared document to comment on why these last two might be different
+>   
+> Consider:
+> - Of the three methods described for time tracking which would be more useful to you
+> 
+{: .challenge}
 
+## "Owning" your project
+Your PhD and research career is a story in progress and you are the hero protagonist.
+As with any good story, the hero goes through an arc of personal development.
+For you, this will likely be a progression from being led by your supervisor in a project that they conceived to being the expert in an area and being the main driver of your research.
+You will likely start out turning up to meetings that your supervisor calls, doing what you are told, reading all the suggested readings, and relying on your supervisor for the "next steps".
+Eventually you will turn up to meetings that you organize, deciding on what your project goals are and how you'll progress toward them, and handing out todo items at the end of a meeting.
+This is what we call "owning" your project, and when it happens you'll feel less like an imposter, and more in control of your work (and life!).
+When your supervisor or mentor sees this transition is also very rewarding for them!
 
-## Managing "up"
-- Expectation management
-- Giving deadlines
-- Assigning todo items
-- Having meeting agendas
+Much of the above will come naturally with time, but there are things that you can start thinking about now that will help you own your project now.
+Some key owning behaviors include:
+- Setting clear expectations for what work needs to be done, including deadlines
+  - Let people know how much time you have to work on something and when you expect it to be complete
+- Clear communication on progress, including any risks or slippages
+  - Let people know when you complete tasks or if there are road blocks
+- Taking the lead on project ideas
+  - You don't have to have all the solutions, but making suggestions and asking the right questions is extremely helpful to everyone
+- Having meeting agendas and showing up to meetings with all the information that you need
+  - Send plots/text ahead of time for review, have the relevant files/pages open on your laptop ready to share
 
-Discussion about potential issues and solutions.
+> ## Discussion - how do/will you own your project
+> Think about the relationship you have with your group/supervisor
+> - Identify an owning behavior that you are already doing
+> - Identify an issue that you have and would like some advice with
+> - Identify something that you are currently doing that has avoided some of the problems that we started the lesson with [link](#discussion)
+> 
+> Share your ideas in our shared document
+{: .disccusion}
+
 
