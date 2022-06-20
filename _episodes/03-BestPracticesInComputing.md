@@ -41,7 +41,7 @@ To demonstrate the utility of these topics we'll be working on a common task - a
 
 # Use case - visualizing a data set
 Let's go through the process of visualizing some data and see if we can incorporate the above best practices as we go.
-We will be working with a data file that contains information about metorites that have fallen in Australia, and our aim is to plot the location of the meteorites, and give an indication of their masses.
+We will be working with a data file that contains information about meteorites that have fallen in Australia, and our aim is to plot the location of the meteorites, and give an indication of their masses.
 
 To begin with we need to obtain the data.
 We have a nice data set prepared for you which you can download the data with the command[^nbcurl]:
@@ -49,16 +49,16 @@ We have a nice data set prepared for you which you can download the data with th
 [^nbcurl]: replace `wget` with `curl -O` if you are using gitbash
 
 ```
-wget https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Metorite_Landings.csv
+wget https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Meteorite_Landings.csv
 # or
-curl -O https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Metorite_Landings.csv
+curl -O https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Meteorite_Landings.csv
 ```
 {: .language-bash}
 
 We will start with a peak inside this file with the `head` command:
 
 ```
-head Australian_Metorite_Landings.csv
+head Australian_Meteorite_Landings.csv
 ```
 {: .language-bash}
 
@@ -92,7 +92,7 @@ import csv
 csv_list = []
 
 # opening the CSV file
-with open('Australian_Metorite_Landings.csv', mode ='r') as file:
+with open('Australian_Meteorite_Landings.csv', mode ='r') as file:
   # read the CSV file
   csv_reader = csv.reader(file)
 
@@ -185,7 +185,7 @@ So if we let pandas do all the hard work for us then we can extend our above cod
 import pandas as pd
 
 # read a csv file into a data frame
-df = pd.read_csv('Australian_Metorite_Landings.csv')
+df = pd.read_csv('Australian_Meteorite_Landings.csv')
 
 # Have a look at the data
 print("csv data\n--------------------------")
@@ -399,7 +399,7 @@ def plot_meteor_locations(df):
 
 if __name__ == '__main__':
     # read a csv file into a data frame
-    df = pd.read_csv('Australian_Metorite_Landings.csv')
+    df = pd.read_csv('Australian_Meteorite_Landings.csv')
     plot_meteor_locations(df)
 ```
 {: .language-python}
@@ -522,7 +522,7 @@ or
 It is always best to note where your data came from and describe how to use it.
 
 ### Australian_Meteorite_Landings.csv
-Data downloaded from https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Metorite_Landings.csv.
+Data downloaded from https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Meteorite_Landings.csv.
 A truncated version of the data from https://data.nasa.gov/Space-Science/Meteorite-Landings/ak9y-cwf9.
 
 id: NASA meteorite
