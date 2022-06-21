@@ -132,7 +132,7 @@ Now that we have that nomenclature out of the way, lets get started with our Tre
 {: .challenge}
 
 ## Time management
-Part of managing a project is realising that time is a very limited resource so it is often beneficial to manage it to the best of your abilities. You can split time management into two main catagories, prosepctive (planning) and retrospective (tracking).
+Part of managing a project is realizing that time is a very limited resource so it is often beneficial to manage it to the best of your abilities. You can split time management into two main catagories, prospective (planning) and retrospective (tracking).
 
 A common way of estimating time projects will take is to work in hours/days/weeks/months of effort.
 However you are often not working on a single task at a time so it can be easier to break your total time available (your Full-Time Equivalent or FTE), into fractions, and then assign these fractions to different tasks.
@@ -163,14 +163,14 @@ If you are spending more than 10 minutes per day tracking your time, it is unlik
 At the end of each week, you update the sheet to track the fraction of your time you spent on each project.
 Additional projects can be added easily as new columns.
 This is effective for when you only care about your fractional FTE at a fairly low resolution.
-![excel_method](../fig/ExcelMethod.png)
+![excel_method]({{page.root}}{% link fig/ExcelMethod.png}%)
 
 ### Chronos app
 [Chronos](https://app.chronostimetracking.com/) is a simple app that will allow you to keep track of your project time.
 Simply make a new project with a descriptive name and set the billing type to non-billable.
 You can start a timer for the project you are currently working on or manually add how many hours you have spent.
 This method is good for when you have many projects that you are swapping between throughout the day, or when you want to be able to track your 'effective' work hours within a week.
-![chronos_example](../fig/chronos_example.png)
+![chronos_example]({{page.root}}{% link fig/chronos_example.png%}){: .width="600"}
 
 > ## How do you spend your time?
 > Think about the work that you do as part of your research.
