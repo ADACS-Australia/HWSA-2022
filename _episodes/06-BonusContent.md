@@ -4,12 +4,30 @@ teaching: 0
 exercises: 0
 questions:
 - "What else is there?"
+objectives:
+- "review some content that was too important to skip but didn't fit in our lessons"
+keypoints:
+- "there is always more to learn"
 ---
 # Bonus Content
 
-## Automation
+## Bash as a scripting language
+Bash is far more than a terminal, it's a whole language in it's own right.
+What we use as our terminal is equivalent to the interpreter we interact with when we type `python3` on the command line.
+A few key things to know about bash to get you started are:
+- variables can be set like `fname=myfile.csv` (with no spaces around the `=`)
+- variables can be accessed using `${fname}` or the slightly more relaxed `$fname`
+- A file that starts with `#! /usr/bin/env bash` and has execute permissions (`chmod +x <filename>`) can be run directly
+- flow control uses `if ... then ... else .. fi` syntax
+- new line continuation is accomplished by having `\` as the last character on the line
+- converseley, multiple commands can be used on a line, separate them with `;` 
+- program output can be redirected to a file with `>` (replace) or `>>` (append)
 
-### Aliases
+For more info see this [wikibook](https://en.wikibooks.org/wiki/Bash_Shell_Scripting) for a nice intro.
+
+Depending on the task you are trying to accomplish, a bash script can be easier to work with than a python script.
+
+## Automation with aliases
 A basic form of automation is the use of aliases.
 The goal here is to save you a bunch of keyboard or mouse clicks.
 Some common examples:
