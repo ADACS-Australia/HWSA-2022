@@ -50,11 +50,11 @@ We will be working with a data file that contains information about meteorites t
 To begin with we need to obtain the data.
 We have a nice data set prepared for you which you can download the data with the command[^nbcurl]:
 
-[^nbcurl]: replace `wget` with `curl -O` if you are using gitbash
+[^nbcurl]: `wget` isn't available via gitbash, but `curl` is so windows users may have to use `curl`
 
 ```
 wget https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Meteorite_Landings.csv
-# or
+# or if the above didn't work, then try
 curl -O https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/data/Australian_Meteorite_Landings.csv
 ```
 {: .language-bash}

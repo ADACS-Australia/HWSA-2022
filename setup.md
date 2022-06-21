@@ -12,12 +12,18 @@ title: Setup
   - Windows, use either [WSL](https://docs.microsoft.com/en-us/windows/wsl/) if you have it installed, or gitbash (above)
 - A python environment
   - python3 (ideally 3.8+)
-  - matplotlib, basemap, numpy, pandas
-  - Install via conda or pip (only one, not both, see below)
-- Conda (if not using pip)
+  - Install packages using a package manager such as conda or pip (only one, not both, see below)
+    - matplotlib, basemap, numpy, pandas
+- A python pacakge manager (just one)
+  - Conda (large but complete)
+    - [AnyOs](https://www.anaconda.com/products/distribution)
+  - Miniconda (minimal, sufficient for our needs)
     - [MacOS](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html)
     - [Linux](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
     - [Windows](https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html)
+  - See [this guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda) if you are having trouble deciding between conda and miniconda
+  - pip (barebones, also sufficient)
+    - Almost always bundled with python, but see [here](https://pip.pypa.io/en/stable/installation/) if `pip` does nothing for you.
 - Online tools
   - An account on [trello](https://trello.com/en) (free)
   - [sqliteonline](https://sqliteonline.com/) (no account needed)
