@@ -82,8 +82,9 @@ For example you could have:
 - A `metadata.csv` file that maps the location of a file to some high level information such as the file format, the date the file was collected, the processing stage of the data, or the version of the file.
 
 > ## Exercise
-> - Download example data form [TODO](link)
-> - For each of the files decide what stage of processing they are in, wether they are structured or unstructured data
+> - Download example data [example.zip]({{ page.root }}{% link files/example.zip %})
+> - Unzip the file and have a look at the content
+> - See if you can infer the purpose of each file
 > - Make a plan for how you would store and manage this data
 > - Note in the shared document what you have decided for at least one of the files
 {: .challenge}
