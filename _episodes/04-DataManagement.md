@@ -334,27 +334,28 @@ SELECT <columns> FROM <table> WHERE <condition> LIMIT 10;
 > - List the name and reclat/reclong for 15 of these meteorites
 {: .challenge}
 
-~~~
-sqlite> SELECT name, reclat, reclong FROM landings WHERE year >= 1980 AND year <=1990 LIMIT 15;
-name        reclat      reclong   
-----------  ----------  ----------
-Akyumak     39.91667    42.81667  
-Aomori      40.81056    140.78556 
-Bawku       11.08333    -0.18333  
-Binningup   -33.15639   115.67639 
-Burnwell    37.62194    -82.23722 
-Ceniceros   26.46667    -105.23333
-Chela       -3.66667    32.5      
-Chiang Kha  17.9        101.63333 
-Chisenga    -10.05944   33.395    
-Claxton     32.1025     -81.87278 
-Dahmani     35.61667    8.83333   
-El Idrissi  34.41667    3.25      
-Gashua      12.85       11.03333  
-Glanerbrug  52.2        6.86667   
-Guangnan    24.1        105.0     
-~~~
-{: .output}
+> ## Solution
+> ~~~
+> sqlite> SELECT name, reclat, reclong FROM landings WHERE year >= 1980 AND year <=1990 LIMIT 15;
+> name        reclat      reclong   
+> ----------  ----------  ----------
+> Akyumak     39.91667    42.81667  
+> Aomori      40.81056    140.78556 
+> Bawku       11.08333    -0.18333  
+> Binningup   -33.15639   115.67639 
+> Burnwell    37.62194    -82.23722 
+> Ceniceros   26.46667    -105.23333
+> Chela       -3.66667    32.5      
+> Chiang Kha  17.9        101.63333 
+> Chisenga    -10.05944   33.395    
+> Claxton     32.1025     -81.87278 
+> Dahmani     35.61667    8.83333   
+> El Idrissi  34.41667    3.25      
+> Gashua      12.85       11.03333  
+> Glanerbrug  52.2        6.86667   
+> Guangnan    24.1        105.0     
+> ~~~
+> {: .output}
 {: .solution}
 
 You can interact with a database programmatically using the python module `sqlite3`.

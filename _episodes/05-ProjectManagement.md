@@ -202,6 +202,6 @@ Some key owning behaviors include:
 > - Identify something that you are currently doing that has avoided some of the problems that we started the lesson with [link](#discussion)
 > 
 > Share your ideas in our shared document
-{: .disccusion}
+{: .discussion}
 
 
