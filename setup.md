@@ -2,20 +2,20 @@
 title: Setup
 ---
 
-Software required:
+## Software required:
 - Git
-    - [OSX](https://git-scm.com/download/mac)
+    - [MacOS](https://git-scm.com/download/mac)
     - [Linux](https://git-scm.com/download/linux)
     - [Windows](https://git-scm.com/download/win)
 - A terminal
-  - OSX/Linux, a bash terminal is available by default
+  - MocOS/Linux, a bash terminal is available by default
   - Windows, use either [WSL](https://docs.microsoft.com/en-us/windows/wsl/) if you have it installed, or gitbash (above)
 - A python environment
   - python3 (ideally 3.8+)
   - matplotlib, basemap, numpy, pandas
   - Install via conda or pip (only one, not both, see below)
 - Conda (if not using pip)
-    - [OSX](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html)
+    - [MacOS](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html)
     - [Linux](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
     - [Windows](https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html)
 - Online tools
@@ -33,11 +33,14 @@ wget https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/files/
 # or
 curl -O https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/files/environment.yaml
 ```
+{: .language-bash}
+
 Then install and activate
 ```
 conda env create --name hwsa2022 --file environment.yaml
 conda activate hwsa2022
 ```
+{: .language-bash}
 
 ## Pip environment
 If you are using pip to manage your python modules we have an environment set up for you.
@@ -54,6 +57,7 @@ wget https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/files/
 # or
 curl -O https://raw.githubusercontent.com/ADACS-Australia/HWSA-2022/gh-pages/files/requirements.txt
 ```
+{: .language-bash}
 
 Install required libraries
 ~~~

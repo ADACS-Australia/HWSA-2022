@@ -7,6 +7,11 @@ questions:
 - "How do I manage different types of data?"
 - "How do I store and access structured data?"
 - "How do I store and access unstructured data?"
+objectives:
+- "Distinguish between different types of data"
+- "Understand how to work with structured and unstructured data"
+- "Be comfortable with SQL select and filter queries"
+- "Understand what meta-data is"
 keypoints:
 - "Invest time in cleaning and transforming your data"
 - "Meta data gives context and makes your data easier to understand"
@@ -250,27 +255,24 @@ To view the structure of a table we can use:
 ~~~
 {: .language-sql}
 
-> ### .schema
-> ~~~
-> sqlite> .schema
-> CREATE TABLE IF NOT EXISTS "landings" (
-> "index" INTEGER,
->   "name" TEXT,
->   "id" INTEGER,
->   "nametype" TEXT,
->   "recclass" TEXT,
->   "fall" TEXT,
->   "year" REAL,
->   "reclat" REAL,
->   "reclong" REAL,
->   "GeoLocation" TEXT,
->   "States" REAL,
->   "Counties" REAL,
->   "mass" REAL
-> );
-> ~~~
-> {: .output}
-{: .solution}
+~~~
+CREATE TABLE IF NOT EXISTS "landings" (
+"index" INTEGER,
+  "name" TEXT,
+  "id" INTEGER,
+  "nametype" TEXT,
+  "recclass" TEXT,
+  "fall" TEXT,
+  "year" REAL,
+  "reclat" REAL,
+  "reclong" REAL,
+  "GeoLocation" TEXT,
+  "States" REAL,
+  "Counties" REAL,
+  "mass" REAL
+);
+~~~
+{: .output}
 
 What we see in the output here are the instructions on how the table was created.
 The name of the table is `landings`, and there are a bunch of column names which we recognize from previous work.
@@ -286,6 +288,7 @@ SELECT <columns> FROM <table>;
 SELECT name, mass, year FROM landings;
 SELECT * FROM landings;
 ~~~
+{: .language-sql}
 
 The last command is the most common command for just looking at the table content as it will show all the columns without you having to list them all.
 If we want to show only the first 10 lines (like `head`) then we can choose a LIMIT of lines using:
@@ -293,6 +296,7 @@ If we want to show only the first 10 lines (like `head`) then we can choose a LI
 ~~~
 SELECT * FROM landings LIMIT10;
 ~~~
+{: .language-sql}
 
 Note that if you are using the command line version of `sqlite3` the default output can be a little hard to read.
 Firstly, you'll get *all* the data speeding by. Secondly, the data are not well formatted for humans to read.
@@ -301,10 +305,14 @@ We can fix this with a few commands:
 .mode column
 .headings on
 ~~~
+{: .language-sql}
 
-Combining all this together we have the following output:
+Combining all this together we have the following:
 ~~~
 sqlite> SELECT * FROM landings LIMIT 10;
+~~~
+{: .language-sql}
+~~~
 index       name        id          nametype    recclass    fall        year        reclat      reclong     GeoLocation        States      Counties    mass      
 ----------  ----------  ----------  ----------  ----------  ----------  ----------  ----------  ----------  -----------------  ----------  ----------  ----------
 0           Aachen      1           Valid       L5          Fell        1880.0      50.775      6.08333     (50.775, 6.08333)                          21.0      
@@ -328,6 +336,7 @@ We can filter the data that we retrieve by using the WHERE clause.
 ~~~
 SELECT <columns> FROM <table> WHERE <condition> LIMIT 10;
 ~~~
+{: .language-sql}
 
 > ## Challenge
 > - Find all the meteorites that fell between 1980 and 1990, and have a mass between 100-1,000g.
@@ -337,6 +346,9 @@ SELECT <columns> FROM <table> WHERE <condition> LIMIT 10;
 > ## Solution
 > ~~~
 > sqlite> SELECT name, reclat, reclong FROM landings WHERE year >= 1980 AND year <=1990 LIMIT 15;
+> ~~~
+> {: .language-sql}
+> ~~~
 > name        reclat      reclong   
 > ----------  ----------  ----------
 > Akyumak     39.91667    42.81667  

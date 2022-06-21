@@ -7,7 +7,16 @@ questions:
 - "How can I manage my PhD?"
 - "What tools are available to help me with time and project management?"
 - "How can I use my project management skills on my supervisor?"
+objectives:
+- "Understand how to use a kanban board to manage a project"
+- "Reflect on your current and future time management"
+- "Make a plan to 'own' your PhD project"
+keypoints:
+- "Project and time management is key to success"
+- "Many tools exist, find one that works for you and stick with it"
+- "You PhD project is your's for the taking"
 ---
+
 # Project management
 The goal of project management is to make it easier to understand the work that needs to be done, track the progress of individual work items, to reduce the communications overhead, and to increase productivity of all involved.
 By applying project management strategies to your work you can expect to get more work done with your limited resources, have a clearer view of the current state of your projects, and be able to collaborate with others more effectively.

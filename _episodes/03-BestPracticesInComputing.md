@@ -4,15 +4,19 @@ teaching: 30
 exercises: 30
 questions:
 - "What does best practice mean?"
-- "What practices should I adopt?"
+- "What should I be doing?"
 - "What should I try to avoid?"
+objectives:
+- "Appreciate guidelines for best practice"
+- "Work through an exercise demonstrating some of these practices"
+- "Be less scared about testing and documentation"
 keypoints:
 - "Validation is testing"
 - "Documentation benefits everyone (especially you)"
 - "Version control will save you time and effort"
 ---
 # Best Practices In Scientific Computing
-Borrowed and adapted from computer science and software engineering.
+While computer science and software engineering have different goals than scientific computing, many of the best practices in these disciplines are still applicable to scientific computing.
 
 Since the top priority of scientific computing is to have software that produces correct results, we can make our lives easier by adopting practices that make our code or scripts easier to understand (by humans) so that errors can be found and fixed easily.
 Additionally, since our research work is continuously changing it is very likely that we will revisit our scripts to re-use them (in part or in whole) or expand their use.

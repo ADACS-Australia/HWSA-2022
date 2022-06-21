@@ -2,11 +2,20 @@
 layout: page
 title: "Contributor Code of Conduct"
 ---
-As contributors and maintainers of this project,
-we pledge to follow the [Carpentry Code of Conduct][coc].
 
-Instances of abusive, harassing, or otherwise unacceptable behavior
-may be reported by following our [reporting guidelines][coc-reporting].
+This workshop will be an inclusive and equitable space, which respects:
+- the lived experience of it's attendees,
+- the right for all to learn, and 
+- the fact that learning means making mistakes.
 
-[coc]: https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html
-[coc-reporting]: https://docs.carpentries.org/topic_folders/policies/incident-reporting.html
+We ask that you follow these guidelines:
+
+- Behave professionally. Harassment and sexist, racist, or exclusionary comments or jokes are not appropriate.
+- All communication should be appropriate for a professional audience including people of many different backgrounds. 
+- Sexual or sexist language and imagery is not appropriate.
+- Be considerate and respectful to others.
+- Do not insult or put down other attendees.
+- Critique ideas rather than individuals.
+- Do not engage in tech-shaming.
+
+See the [ASA2022 code of conduct](https://www.asa2022.org/code-of-conduct) and the [Software Carpentries code of conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html) for more information.

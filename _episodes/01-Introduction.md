@@ -3,8 +3,12 @@ title: "Introduction"
 teaching: 10
 exercises: 5
 questions:
-- "What will be learning?"
-- "How will be learning?"
+- "What will we be learning?"
+- "How will we be learning?"
+objectives:
+- "Review schedule"
+- "Set expectations for engagement and behavior"
+- "Introduce ourselves"
 keypoints:
 - "This is not a lecture"
 - "The more you engage the more you will benefit"

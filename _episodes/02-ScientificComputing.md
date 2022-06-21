@@ -6,6 +6,10 @@ questions:
 - "What is scientific computing?"
 - "How can I automate common tasks?"
 - "What is reproducible research?"
+objectives:
+- "Feel good about your computing goals"
+- "Appreciate various levels of automation"
+- "Understand what reproducibility means"
 keypoints:
 - "Scientific computing has different goals from computer science and software engineering"
 - "You are a scientist, your focus is on the science"
@@ -21,7 +25,7 @@ Software engineering places a big focus on the usability of the software, and ho
 Scientific computing cares little for any of these concerns, and is primarily concerned with producing correct scientific results.
 There is of course a large overlap between the three ideals as shown in the ternary diagrams below.
 
-![scicomp-ternary](https://images.squarespace-cdn.com/content/v1/549dcda5e4b0a47d0ae1db1e/1515528990663-845VGZ8QQ8A6R8B5UWNS/compsci-scicomp-engrg.png?format=1000w)
+![scicomp-ternary](https://images.squarespace-cdn.com/content/v1/549dcda5e4b0a47d0ae1db1e/1515528990663-845VGZ8QQ8A6R8B5UWNS/compsci-scicomp-engrg.png?format=1000w){: .width="800"}
 
 It is rare today that you can work on any project without having to some kind of computing.
 Many physics and astronomy students are not required to take any computing courses as part of their undergrad (though many do).
@@ -138,7 +142,7 @@ We'll explore these together, but if at a later point you want more help on thes
 Reproducibility is the idea of being able to re-run your analysis with the same data and get the same results.
 Related concepts are replicability, robustness, and generalisabiltiy, as demonstrated in the following diagram.
 
-![reproduciblescience](https://oliviergimenez.github.io/reproducible-science-workshop/slides/assets/definitions.jpg)
+![reproduciblescience](https://oliviergimenez.github.io/reproducible-science-workshop/slides/assets/definitions.jpg){: .width="800"}
 
 There are many reasons why you would re-run your analysis or data processing:
 - As you develop your data collection, processing, and analysis techniques you will make changes to the process. Each change means re-doing all the work again.
@@ -149,7 +153,7 @@ There are many reasons why you would re-run your analysis or data processing:
 A science workflow that can be consistently re-run and easily adapted is of huge benefit to you, the researcher.
 Sharing your data, and your methodology (via code and documentation) with others can also benefit the community because it will allow your work to be rerun and adapted, saving others time whilst generating citations and accolades for you.
 
-![researchtime](https://oliviergimenez.github.io/reproducible-science-workshop/slides/img/time-saving.png)
+![researchtime](https://oliviergimenez.github.io/reproducible-science-workshop/slides/img/time-saving.png){: .width="800"}
 
 > ## Discussion
 > - If you were to redo all your data processing from scratch, how confident are you that you would get the same result?
