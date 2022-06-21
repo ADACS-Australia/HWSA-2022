@@ -19,15 +19,15 @@ We would like to pay our respect to their Elders past, present and emerging and 
 
 | AEST  | AWST  | Event                       | Notes |
 | ----- | ----- | --------------------------- | ----- |
-| 09:00 | 07:00 | Introduction and setup      |       |
-| 09:30 | 07:30 | Scientific Computing        |       |
-| 10:30 | 08:30 | break                       |       |
-| 11:00 | 09:00 | Best Practices In Computing |       |
-| 12:00 | 10:00 | break                       |       |
-| 13:00 | 11:00 | Data Management             |       |
-| 14:00 | 12:00 | break                       |       |
-| 14:30 | 12:30 | Project Management          |       |
-| 15:30 | 13:30 | end                         |       |
+| 09:30 | 07:30 | Introduction and setup      |       |
+| 10:00 | 08:00 | Scientific Computing        |       |
+| 11:00 | 09:00 | break                       |       |
+| 11:30 | 09:30 | Best Practices In Computing |       |
+| 12:30 | 10:30 | break                       |       |
+| 13:30 | 11:30 | Data Management             |       |
+| 14:30 | 12:30 | break                       |       |
+| 15:00 | 13:00 | Project Management          |       |
+| 16:00 | 14:00 | end                         |       |
 
 ## Content
 
