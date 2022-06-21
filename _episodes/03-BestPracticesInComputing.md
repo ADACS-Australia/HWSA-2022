@@ -302,7 +302,7 @@ plt.show()
 {: .language-python}
 
 > ## Our first plot
-> ![MeteoriteLocations1]({{page.root}}{% link fig/MeteoriteLocations_1.png %}){ width='800'}
+> ![MeteoriteLocations1]({{page.root}}{% link fig/MeteoriteLocations_1.png %}){: width='800'}
 >
 {: .solution}
 
@@ -348,7 +348,7 @@ plt.show()
 {: .language-python}
 
 > ## Our second plot
-> ![MeteoriteLocations2]({{page.root}}{% link fig/MeteoriteLocations_2.png %}){ width='800'}
+> ![MeteoriteLocations2]({{page.root}}{% link fig/MeteoriteLocations_2.png %}){: width='800'}
 >
 {: .solution}
 

@@ -195,7 +195,7 @@ We need context (how/why the table was created), and also a description of what 
 If we go to the [NASA website](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh) which provides this data, they have a description of the column data.
 However, it's not so helpful:
 
-![MeteoriteColumnDescriptions]({{page.root}}{% link fig/MeteoriteColumnDescriptions.png %}){ width=400}
+![MeteoriteColumnDescriptions]({{page.root}}{% link fig/MeteoriteColumnDescriptions.png %}){: width=400}
 
 Wuh-wah!
 The only column with a description is the one that was most obvious.

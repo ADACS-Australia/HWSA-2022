@@ -47,7 +47,7 @@ You'll see waterfall style project management in large projects like instrument 
 
 Due to the rigid design of waterfall managed projects, the work requirements are often visualised in a Gantt chart such as the one below:
 
-|                      ![GanttChart](https://binaries.templates.cdn.office.net/support/templates/en-us/lt16400962_quantized.png){ width="400"}                      |
+|                      ![GanttChart](https://binaries.templates.cdn.office.net/support/templates/en-us/lt16400962_quantized.png){: width="400"}                      |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | The waterfall management style gets it's name from the fact that work items are completed in a linear fashion with a cascading dependency chart such as that above. |
 
@@ -55,7 +55,7 @@ With a **agile** mindset the main focus is on outcomes and deliverables, with th
 An agile approach works well in situations where the path to completion is not well defined, or where resources or requirements are liable to change throughout the project.
 Without knowing it you will probably already be engaged in a very agile-like approach to your research projects simply because so much of your work is likely to be exploratory in nature.
 
-|                     ![Agile](https://startinfinity.s3.us-east-2.amazonaws.com/t/9mtBIwkEkg9v7ykdjPK4VJHjPIq2KqEnVLA8cf9z.png){ width="800"}                     |
+|                     ![Agile](https://startinfinity.s3.us-east-2.amazonaws.com/t/9mtBIwkEkg9v7ykdjPK4VJHjPIq2KqEnVLA8cf9z.png){: width="800"}                     |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | In a research context, an agile approach is all about exploring and responding to change (discoveries). You don't know the outcome of your work before you start. |
 
@@ -67,7 +67,7 @@ Columns are customized for each project, but there are typically no more than 4-
 If a board is tracking multiple projects, or a project has multiple deliverables, then the board can also be divided horizontally into swimlanes.
 As the name suggests, tasks can move within a swimlanes, but are not intended to change lanes.
 
-| ![KanbanSwimLanes]({{ page.root}}{% link fig/KanbanSwimLanes.jpeg%}){ width="800"} |
+| ![KanbanSwimLanes]({{ page.root}}{% link fig/KanbanSwimLanes.jpeg%}){: width="800"} |
 | :----------------------------------------------------------------------------------: |
 |             An example of a Kanban board with 5 columns and 3 swimlanes              |
 
@@ -163,14 +163,14 @@ If you are spending more than 10 minutes per day tracking your time, it is unlik
 At the end of each week, you update the sheet to track the fraction of your time you spent on each project.
 Additional projects can be added easily as new columns.
 This is effective for when you only care about your fractional FTE at a fairly low resolution.
-![excel_method]({{page.root}}{% link fig/ExcelMethod.png}%)
+![excel_method]({{page.root}}{% link fig/ExcelMethod.png %})
 
 ### Chronos app
 [Chronos](https://app.chronostimetracking.com/) is a simple app that will allow you to keep track of your project time.
 Simply make a new project with a descriptive name and set the billing type to non-billable.
 You can start a timer for the project you are currently working on or manually add how many hours you have spent.
 This method is good for when you have many projects that you are swapping between throughout the day, or when you want to be able to track your 'effective' work hours within a week.
-![chronos_example]({{ page.root }}{% link fig/chronos_example.png %}){ width="600"}
+![chronos_example]({{ page.root }}{% link fig/chronos_example.png %}){: width="600"}
 
 > ## How do you spend your time?
 > Think about the work that you do as part of your research.

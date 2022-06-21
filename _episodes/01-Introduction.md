@@ -83,7 +83,7 @@ See the [ASA2022 code of conduct](https://www.asa2022.org/code-of-conduct) and t
 
 
 > ## Introduce yourselves
-> ![IceBreaker](https://ichef.bbci.co.uk/news/976/cpsprodpb/D6B5/production/_123956945_225107a3-318d-4c2e-b040-2dcd03c4698a.jpg){width="400"}
+> ![IceBreaker](https://ichef.bbci.co.uk/news/976/cpsprodpb/D6B5/production/_123956945_225107a3-318d-4c2e-b040-2dcd03c4698a.jpg){: width="400"}
 > 
 > Introduce yourself to your peers by telling us your name, a game you enjoy playing, and a food that you would like to try but never have.
 > 
