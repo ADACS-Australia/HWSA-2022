@@ -1,7 +1,7 @@
 ---
-title: "Introduction"
-teaching: 10
-exercises: 5
+title: "Introduction and setup"
+teaching: 15
+exercises: 15
 questions:
 - "What will we be learning?"
 - "How will we be learning?"
