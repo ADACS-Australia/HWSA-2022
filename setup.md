@@ -13,7 +13,7 @@ Software required:
 - A python environment
   - python3 (ideally 3.8+)
   - matplotlib, basemap, numpy, pandas
-  - Install via conda or pip (see below)
+  - Install via conda or pip (only one, not both, see below)
 - Conda (if not using pip)
     - [OSX](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html)
     - [Linux](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
@@ -23,7 +23,7 @@ Software required:
 
 
 ## Conda environment
-We have set up a conda python environment that will install all dependencies for you.
+If you are using Conda to manage your python modules we have set up a Conda python environment that will install all dependencies for you.
 After installing Conda, run the following commands:
 
 Download:
@@ -39,6 +39,7 @@ conda activate hwsa2022
 ```
 
 ## Pip environment
+If you are using pip to manage your python modules we have an environment set up for you.
 Create an activate a new python environment (optional, but recommended)
 ~~~
 python3 -m venv hwsa2022
