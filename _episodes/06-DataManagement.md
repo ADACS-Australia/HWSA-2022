@@ -71,7 +71,7 @@ The tables themselves can be stored as `.csv`, `.fits`, or `.vot` tables which c
 [Google sheets](https://www.google.com.au/sheets/about/), [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel), or [LibreOffice Calc](https://www.libreoffice.org/discover/calc/) can also be beneficial for storing structured data, particularly because they allow you to do some data exploration, cleaning, filtering, and analysis within the file itself.
 
 When your data volumes become large, or you find yourself needing to have multiple related tables, then you probably want to start exploring databases as a storage option.
-See the [Bonus Content]({{page.root}}{% link _episodes/06-BonusContent.md %}#structured-data-storage)
+See the [Bonus Content]({{page.root}}{% link _episodes/10-BonusContent.md %}#structured-data-storage)
 
 ### Unstructured data
 Unstructured data cannot be aggregated or combined into a single data format due to their lack of common structure.
