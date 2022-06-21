@@ -20,6 +20,7 @@ Software required:
     - [Windows](https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html)
 - Online tools
   - An account on [trello](https://trello.com/en) (free)
+  - [sqliteonline](https://sqliteonline.com/) (no account needed)
 
 
 ## Conda environment
