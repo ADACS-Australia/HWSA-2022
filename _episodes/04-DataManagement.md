@@ -45,7 +45,7 @@ Here we are more concerned with a higher level of abstraction, which includes th
   - often represented as tables or figures
 
 The following describes a generic data processing workflow
-![DataProcessing]({{ page.root }}{% link fig/DataProcessing.svg %}){: width='800'}
+![DataProcessing]({{ page.root }}{% link fig/DataProcessing.svg %}){:width='800'}
 
 > ## Discussion
 > In your groups have a look at the different types of data and stages of the data processing workflow.
@@ -61,7 +61,7 @@ The following describes a generic data processing workflow
 We can classify data by the processing stage as was done above, but also in an orthogonal dimension of how the data is organized.
 The two most general considerations here are either structured or unstructured data.
 
-![StructredUnstructredData](http://intellspot.com/wp-content/uploads/2020/04/Structured-vs-unstructured-data-an-infographic-1024x724.png){: width='800'}
+![StructredUnstructredData](http://intellspot.com/wp-content/uploads/2020/04/Structured-vs-unstructured-data-an-infographic-1024x724.png){:width='800'}
 
 The way that we can store and access data depends on how it's structured.
 
@@ -195,7 +195,7 @@ We need context (how/why the table was created), and also a description of what 
 If we go to the [NASA website](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh) which provides this data, they have a description of the column data.
 However, it's not so helpful:
 
-![MeteoriteColumnDescriptions]({{page.root}}{% link fig/MeteoriteColumnDescriptions.png %}){: .width=400}
+![MeteoriteColumnDescriptions]({{page.root}}{% link fig/MeteoriteColumnDescriptions.png %}){ width=400}
 
 Wuh-wah!
 The only column with a description is the one that was most obvious.
