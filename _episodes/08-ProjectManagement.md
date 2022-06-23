@@ -85,19 +85,6 @@ As the name suggests, tasks can move within a swimlanes, but are not intended to
 >
 {: .challenge}
 
-Cards have a lot of features that you can play with.
-Some of the immediately useful ones include:
-- a due date
-- embedded check lists for incremental tasks
-- customizable coloured labels
-- attachments
-- The ability to use markdown to format the text of the card
-- A chat/discussion space
-
-| ![FancyCard](https://adacs-australia.github.io/research_project_management_training/fig/detailed_card.png) |
-| :--------------------------------------------------------------------------------------------------------: |
-|                     An example of some of the features that you can add to your cards                      |
-
 ### Online Kanban with Trello
 Trello is one of the most popular project management applications thanks to it being easy to use, flexible, and free.
 
@@ -114,6 +101,20 @@ These are good people.
 Trello uses a Kanban board to track tasks for each of your boards, and this is the default visualization that you’ll see when you create a board.
 The different columns within a board are referred to as "lists" and items within the list are "cards".
 You will have the freedom to create/rename/delete the lists as you see fit, and to move cards between lists as they move through the to-do/doing/done phases that you define.
+
+Cards have a lot of features that you can play with.
+Some of the immediately useful ones include:
+- a due date
+- embedded check lists for incremental tasks
+- customizable coloured labels
+- attachments
+- The ability to use markdown to format the text of the card
+- A chat/discussion space
+
+| ![FancyCard](https://adacs-australia.github.io/research_project_management_training/fig/detailed_card.png) |
+| :--------------------------------------------------------------------------------------------------------: |
+|                     An example of some of the features that you can add to your cards                      |
+
 
 Now that we have that nomenclature out of the way, lets get started with our Trello accounts.
 

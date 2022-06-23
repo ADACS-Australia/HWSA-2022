@@ -62,7 +62,8 @@ Each have their tradeoffs and strengths, but a major difference is that it is of
 > - Match your activity to a tool that you use, or one that you want to use.
 > - For each of the tools that you have identified note if it has a GUI or CLI (or both).
 > - What aspects of your day-to-day do you *wish* you could automate?
-> In our shared document 
+>
+> In our shared document contribute one item from each of the above.
 {: .challenge}
 
 Simple tasks are often the most easily automated.

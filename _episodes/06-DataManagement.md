@@ -295,7 +295,7 @@ The last command is the most common command for just looking at the table conten
 If we want to show only the first 10 lines (like `head`) then we can choose a LIMIT of lines using:
 
 ~~~
-SELECT * FROM landings LIMIT10;
+SELECT * FROM landings LIMIT 10;
 ~~~
 {: .language-sql}
 
